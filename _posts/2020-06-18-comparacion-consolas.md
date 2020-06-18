@@ -12,6 +12,8 @@ date: 2020-06-18
 | Retrocompatibilidad| PlayStation 4 Games, PSVR | Xbox, Xbox 360, Xbox One, Accessories |
 | Exclusivos		 | Halo Infinite			 | Spiderman, Death Stranding, Horizon 2 |
 
+Bro this don't make sense.
+
 ## Otros Juegos
 * Assassin's Creed (Unity, Syndicate, Origins)
 * Lego Star Wars
