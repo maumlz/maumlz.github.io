@@ -16,4 +16,4 @@ Creo que es lo mas relevante de el día. Sobres.
 
 [Recomendacion](https://youtu.be/LuIdwcrtkYo)
 ![Slowed + Reverb](slowedreverb.gif)
-<img src="../img/slowedreverb.gif"/>
+<img src="slowedreverb.gif"/>
