@@ -4,11 +4,11 @@ title: "Comparación Consolas"
 date: 2020-06-18
 ---
 | Specs | Xbox Series X | PlayStation 5 |
-| :---: | :---: | :---: |
-| Precio			 | TBA						 | TBA									 |
-| Fecha				 | Dec 2020					 | Dec 2020								 |
-| RAM				 | 16 GB					 | 16 GB								 |
-| Almacenamiento	 | 825 SSD gb				 | 1 TB SSD								 |
+| --- | --- | --- |
+| Precio | TBA | TBA |
+| Fecha	| Dec 2020 | Dec 2020 |
+| RAM | 16 GB | 16 GB	|
+| Almacenamiento | 825 SSD GB | 1 TB SSD								 |
 | Retrocompatibilidad| PlayStation 4 Games, PSVR | Xbox, Xbox 360, Xbox One, Accessories |
 | Exclusivos		 | Halo Infinite			 | Spiderman, Death Stranding, Horizon 2 |
 
