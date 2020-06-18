@@ -15,4 +15,4 @@ Hoy todo el día estuve escuchando música junto a videos de [NomadicAmbience](h
 Creo que es lo mas relevante de el día. Sobres.
 
 [Recomendacion](https://youtu.be/LuIdwcrtkYo)
-<img src="../img/slowedreverb.gif" alt="Slowed + Reverb">
+<img src="../img/slowedreverb.gif" alt="Slowed + Reverb"/>
