@@ -13,3 +13,6 @@ He empezado a usar [Joplin](https://joplinapp.org/) para tomar notas de lo que v
 Hoy todo el día estuve escuchando música junto a videos de [NomadicAmbience](https://www.youtube.com/channel/UCqRTj-Nu_8to3jIBlXptOtA), el vato sube videos de 30 min a 1 hora donde camina por las calles de ciudades en diferentes paises y graba el ambiente, en su mayoria hay lluvia lo cual pienso que es un atractivo para muchas personas. En cuanto a la música, en su mayoria escuche estos _remixes_ de canciones en las cuales reducen la velocidad y bajan el _pitch_ de la voz poniendo a la cancion a un _mood_ melancólico. Me aseguraré de hacer una playlist en YouTube.
 
 Creo que es lo mas relevante de el día. Sobres.
+
+[Recomendacion](https://youtu.be/LuIdwcrtkYo)
+<img src="../img/slowedreverb.gif" alt="Slowed + Reverb">
