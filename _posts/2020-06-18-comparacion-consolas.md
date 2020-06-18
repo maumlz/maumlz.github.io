@@ -4,8 +4,8 @@ title: "Comparación Consolas"
 date: 2020-06-18
 ---
 # Consolas
-| Specs 			 | Xbox Series X			 | PlayStation 5						 |
-| ----- 			 | -------------			 | -------------						 |
+| Specs | Xbox Series X | PlayStation 5 |
+| ----- | ------------- | -------------	|
 | Precio			 | TBA						 | TBA									 |
 | Fecha				 | Dec 2020					 | Dec 2020								 |
 | RAM				 | 16 GB					 | 16 GB								 |
