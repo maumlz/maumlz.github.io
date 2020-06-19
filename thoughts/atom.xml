@@ -14,13 +14,13 @@ layout: feed
 		<email>mauricio_esteban@live.com</email>
 	</author>
 
-	{% for post in site.posts %}
+	{% for thought in site.thoughts %}
 		<entry>
-			<title>{{ post.title }}</title>
+			<title>{{ thought.title }}</title>
 			<link href="http://maumlz.github.io{{ post.url }}"/>
-			<updated>{{ post.date | date_to_xmlschema }}</updated>
-			<id>http://maumlz.github.io{{ post.id }}</id>
-			<content type="html">{{ post.content | xml_escape }}</content>
+			<updated>{{ thought.date | date_to_xmlschema }}</updated>
+			<id>http://maumlz.github.io{{ thought.id }}</id>
+			<content type="html">{{ thought.content | xml_escape }}</content>
 		</entry>
 	{% endfor %}
 

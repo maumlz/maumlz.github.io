@@ -5,7 +5,7 @@ title: Mauricio's Thoughts
 	<h1>{{ page.title }}</h1>
 	<ul class="posts">
 
-	  {% for post in site.posts %}
-	    <li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+	  {% for thought in site.thoughts %}
+	    <li><span>{{ thought.date | date_to_string }}</span> » <a href="{{ thought.url }}" title="{{ thought.title }}">{{ thought.title }}</a></li>
 	  {% endfor %}
 	</ul>
