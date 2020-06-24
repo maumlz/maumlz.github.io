@@ -8,49 +8,40 @@ nav ul, footer ul {
     padding: 0px;
     list-style: none;
     font-weight: bold;
-    background-color: SteelBlue;
 }
 nav ul li, footer ul li {
     display: inline;
     margin-right: 20px;
-    background-color: LightSteelBlue;
 }
 a {
     text-decoration: none;
-    background-color: LightBlue;
 }
 a:hover {
     text-decoration: underline;
 }
 h1 {
     font-size: 3em;
-    background-color: PowderBlue;
 }
 h2{
   font-size: 4em;
-  background-color: LightSkyBlue;
 }
 p, table{
     font-size: 1.5em;
     line-height: 1.4em;
     color: #333;
-    background-color: SkyBlue;
 }
 footer {
     border-top: 1px solid #d5d5d5;
     font-size: .8em;
-    background-color: CornflowerBlue;
 }
 
 ul {
     margin: 20px auto 40px;
     font-size: 1.5em;
-    background-color: DeepSkyBlue;
 }
 
 ul li {
     list-style: none;
-    background-color: DodgerBlue;
 }
 
 table, th, td {
