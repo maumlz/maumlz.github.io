@@ -40,3 +40,7 @@ ul.posts {
 ul.posts li {
     list-style: none;
 }
+
+table, th, td {
+  border: 1px solid black;
+}
