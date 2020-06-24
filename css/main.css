@@ -2,16 +2,18 @@ body {   /*Margen, y*/
     margin: 60px auto;
     width: 70%;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    background-color: lightblue;
+    background-color: Tomato;
 }
 nav ul, footer ul {
     padding: 0px;
     list-style: none;
     font-weight: bold;
+    background-color: Orange;
 }
 nav ul li, footer ul li {
     display: inline;
     margin-right: 20px;
+    background-color: DodgerBlue;
 }
 a {
     text-decoration: none;
