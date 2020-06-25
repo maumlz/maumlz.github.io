@@ -1,5 +1,5 @@
 
-function cambiarTitulo(){
-  let atribute = element.getAttribute(alt);
+function cambiarTitulo(e){
+  let atribute = e.getAttribute(alt);
     alert( 'Hello, world!'+atribute );
 }
