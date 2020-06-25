@@ -64,6 +64,7 @@ th {
 }
 
 img{
-  max-width: 960px;
+  width: 960px;
   height: auto;
+  title: img.alt;
 }
