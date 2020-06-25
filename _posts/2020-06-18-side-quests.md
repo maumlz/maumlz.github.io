@@ -10,7 +10,7 @@ Despues de arreglar lo de el `path` me entretuve limpinado mi maquina, conocen e
 En cuanto a música no hubo mucho cambio asi que ahi va otra [recomendacion](https://youtu.be/V4-MZtpcsTU). Sobres.
 
 
-![ese es yhandi!!!](https://i.redd.it/oaxqhemdw4n11.gif)
+![ese es yhandi!!!](https://i.redd.it/oaxqhemdw4n11.gif "ese es yhandi!!!")
 
 * * *
 ### Agregar variable de entorno (windows)

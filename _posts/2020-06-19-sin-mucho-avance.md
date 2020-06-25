@@ -10,4 +10,4 @@ Al final no utilizaré el [repositorio](https://github.com/mszep/pandoc_resume) 
 Sobres.
 
 [Recomendación, no todo es hip-hop](https://youtu.be/LpDV6uO-99k)
-![RIP a una leyenda, Mr. Baggins](https://preview.redd.it/igcg9fb5vu551.jpg?width=640&crop=smart&auto=webp&s=0047daaad8143fbd5e2a0fc69d2c055bb9a9f9bc)
+![RIP a una leyenda, Mr. Baggins](https://preview.redd.it/igcg9fb5vu551.jpg?width=640&crop=smart&auto=webp&s=0047daaad8143fbd5e2a0fc69d2c055bb9a9f9bc "RIP a una leyenda, Mr. Baggins")
