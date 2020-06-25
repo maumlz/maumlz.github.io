@@ -66,4 +66,5 @@ th {
 img{
   width: 960px;
   height: auto;
+  onload: "cambiarTitulo(this);"
 }
