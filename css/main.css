@@ -64,5 +64,6 @@ th {
 }
 
 img{
-  width: 480;
+  width: 480px;
+  height: auto;
 }
