@@ -19,10 +19,10 @@ a:hover {
     text-decoration: underline;
 }
 h1 {
-    font-size: 3em;
+    /*font-size: 3em;*/
 }
 h2{
-  font-size: 2em;
+/*  font-size: 2em;*/
 }
 p, table{
     font-size: 1.5em;
