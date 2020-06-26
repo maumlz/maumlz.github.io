@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Objetivos"
-date: 2020-06-24
+date: 2020-06-25
 ---
 A ver, tengo que plasmar los objetivos de este sitio. Primero debe de servir como una página que muestre información profesional sobre mi, además de contener un blog/bitacora "diaria" de lo que estoy trabajando. Contendrá mi CV junto a una colección de mis proyectos.
 
