@@ -5,17 +5,17 @@ date: 2020-06-25
 ---
 A ver, tengo que plasmar los objetivos de este sitio. Primero debe de servir como una página que muestre información profesional sobre mi, además de contener un blog/bitacora "diaria" de lo que estoy trabajando. Contendrá mi CV junto a una colección de mis proyectos.
 
-### [Página inicial (Home)](https://maumlz.github.io/)
+## [Página inicial (Home)](https://maumlz.github.io/)
 Mensaje de bienvenida que informe que contiene el sitio y como esta distribuido.
 También tendrá las entradas mas recientes tanto del blog como de proyectos.
 
-### [About](https://maumlz.github.io/about)
+## [About](https://maumlz.github.io/about)
 Quiza convertirla en proyectos o quitarla.
 
-### [CV](https://maumlz.github.io/cv)
+## [CV](https://maumlz.github.io/cv)
 Contendrá mi curriculum en MD y pdf.
 
-### [Blog](https://maumlz.github.io/blog)
+## [Blog](https://maumlz.github.io/blog)
 Entradas del blog
 
 
