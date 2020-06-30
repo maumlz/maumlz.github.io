@@ -1,36 +1,10 @@
 <!DOCTYPE html>
-	<html>
-		<head>
-			<title>{{ page.title }}</title> <!--Interpretado en md-->
-			<meta name="viewport" content="width=device-width, initial-scale=1.0">
-			<link rel="stylesheet" type="text/css" href="/css/main.css">
-			<script src="/js/main.js"></script>
-		</head>
-		<body>
-			"body"
-			<nav>
-				"nav"
-	    		<ul>
-						"ul"
-	        		<li>"li"<a href="/">"< a >" Home</a></li>
-		        	<li>"li"<a href="/about">"< a >" About</a></li>
-	        		<li>"li"<a href="/markdown-cv">"< a >" CV</a></li>
-	        		<li>"li"<a href="/blog">"< a >" Blog</a></li>
-							<!--<li><a href="/thoughts">Thoughts</a></li>-->
-	    		</ul>
-			</nav>
-			<div class="container">
-				"div"
-			{{ content }}
-
-			</div><!-- /.container -->
-			<footer>
-				"footer"
-	    		<ul>
-						"ul"
-	        		<li>"li"<a href="mailto:mauricio_esteban@live.com">"< a >" email</a></li>
-	        		<li>"li"<a href="https://github.com/maumlz">"< a >"github.com/maumlz</a></li>
-				</ul>
-			</footer>
-		</body>
-	</html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+  </head>
+  <body>
+    {{ content }}
+  </body>
+</html>
