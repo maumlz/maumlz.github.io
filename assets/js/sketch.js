@@ -1,6 +1,6 @@
 let elipses=[];
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(windowWidth, windowHeight);
   textSize(15);
   strokeWeight(3);
   for(i=0;i<1;i++){
@@ -31,7 +31,7 @@ function elipse(x,y){
   this.sizeOne=random(20,80);
   this.sizeTwo=random(20,80);
   this.dibujar=function(){
-    ellipse(this.x,this.y,this.sizeOne,this.sizeOne); 
+    ellipse(this.x,this.y,this.sizeOne,this.sizeOne);
   }
   this.mover=function(){
    this.x+=random(-5,5);
