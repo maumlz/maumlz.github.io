@@ -38,3 +38,6 @@ function elipse(x,y){
     this.y+=random(-5,5);
   }
 }
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
