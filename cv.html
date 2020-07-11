@@ -2,17 +2,41 @@
 layout: default
 title: cv
 ---
+<style>
 
-<h1> aqui va el cv </h1>
+  body{
+    width: inherit;
+  }
 
-markdown
-<!-- aqui va el gist de cv-->
-<script src="https://gist.github.com/maumlz/54320a9609c7da798577b9d73c4cff52.js"></script>
+  .cvs{
+    width: inherit;
+      display: flex;
+      flex-flow: wrap row;
+    justify-content: space-between;
+      border: thin solid;
+    }
+  iframe{
+    width: 660px;
+  }
 
-html
-<!-- aqui va el html-->
-<iframe src="/assets/docs/gist_prueba"></iframe>
-
-pdf
-<!-- aqui va el pdf-->
-<iframe src="/assets/docs/cv.pdf"></iframe>
+</style>
+<div class="cvs">
+  <div>
+    <iframe src="https://maumlz.github.io/markdown-cv/cv-versions/cv1.html"></iframe>
+  </div>
+  <div>
+    <iframe src="https://maumlz.github.io/markdown-cv/cv-versions/cv2.html"></iframe>
+  </div>
+  <div>
+    <iframe src="https://maumlz.github.io/markdown-cv/cv-versions/cv3.html"></iframe>
+  </div>
+  <div>
+    <iframe src="https://maumlz.github.io/markdown-cv/cv-versions/cv4.html"></iframe>
+  </div>
+  <div>
+    <iframe src="https://maumlz.github.io/markdown-cv/cv-versions/temp.html"></iframe>
+  </div>
+  <div>
+    <iframe src="https://maumlz.github.io/assets/docs/cv.pdf"></iframe>
+  </div>
+</div>
