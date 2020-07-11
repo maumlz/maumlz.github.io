@@ -1,6 +1,6 @@
 let elipses=[];
 function setup() {
-  createCanvas(displayWidth, displayHeight);
+  createCanvas(windowWidth, windowHeight);
   textSize(15);
   strokeWeight(3);
   for(i=0;i<1;i++){
