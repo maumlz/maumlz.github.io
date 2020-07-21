@@ -10,7 +10,7 @@ Una ecuación diferencial es una ecuación que relaciona una función desconocid
 $$
 \frac{dx}{dt} = x^2 + t^2
 $$
-Esta involucra la función $$x(t)$$ y su primera derivada $x'(t)=\frac{dx}{dt}$.
+Esta involucra la función $x(t)$ y su primera derivada $x'(t)=\frac{dx}{dt}$.
 #### Ejemplo 2
 $$\frac{d^2y}{dx^2} + 3\frac{dy}{dx} + 7y = 0$$
 Esta incluye la función $y(x)$ y sus dos primeras derivadas $y'(x)$ y $y''(x)$.
