@@ -1,6 +1,4 @@
 markdown: kramdown
-kramdown:
-  math_engine: null
 permalink: /blog/:year/:month/:day/:title
 plugins:
   - jekyll-paginate
