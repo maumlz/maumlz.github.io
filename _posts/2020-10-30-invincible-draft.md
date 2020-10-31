@@ -18,6 +18,6 @@ Hay una serie que esta por estrenarse en Amazon Prime, donde Kirkman y Walker es
 ## Ideas para el cover
 
 ![](./assets/img/coverart1.jpg =250x)
-![](./assets/img/coverart2.png)
+![](./assets/img/coverart2.jpg)
 ![](./assets/img/coverart3.jpg)
-![](./assets/img/coverart4.jpg)
+![](./assets/img/coverart4.png)
