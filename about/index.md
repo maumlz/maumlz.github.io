@@ -2,6 +2,11 @@
 layout: default
 title: About
 ---
-# About page
 
-This page tells you a little bit about me.
+## Todo
+- [ ] Fill the pages
+- [x] Fix showcase to othala
+- [ ] Make showcase to PU
+- [ ] Add links to CCD and others on othala
+- [ ] Check color palette
+- [ ] Check multi-language

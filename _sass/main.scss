@@ -1,7 +1,73 @@
-.current {
-  color: green;
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  // overflow: hidden;
+
+  font-family: 'Montserrat', sans-serif;
 }
-* {
-  //border-style: solid;
-  //border-width: thin;
+
+html{
+  scroll-behavior: smooth;
+}
+
+#header{
+  height: 85vh;
+}
+
+#profile{
+  position: absolute;
+  width: 40vw;
+  height: 60vh;
+  left: 30vw;
+  top: 20vh;
+  color: white;
+  text-align: center;
+}
+
+#profile img{
+  border-radius: 50%;
+  width: 50%;
+}
+
+#name{
+  margin-top: 30px;
+  margin-bottom: 5px;
+
+  font-size: 2em;
+  font-weight: 900;
+}
+
+#sub-name{
+  text-transform: uppercase;
+  font-size: 1em;
+}
+
+#myCanvas{
+  width: 100%;
+  height: 100%;
+}
+
+.section{
+  padding: 10vh;
+  display: none;
+  background-color: rgb(241, 243, 244);
+}
+
+#about{
+  height: 75vh;
+}
+
+.container{
+  box-shadow: 0 5px 25px 0 rgba(0,0,0,.2);
+  border-radius: 1%;
+}
+
+.row{
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.row:hover{
+ background-color: rgba(0, 0, 0, 0.1);
 }

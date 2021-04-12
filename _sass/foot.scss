@@ -1,0 +1,31 @@
+#foot-bar{
+    overflow: hidden;
+    background-color: #333;
+    height: 5vh;
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+}
+
+#foot-bar ul{
+    list-style-type: none;
+}
+
+#foot-bar li{
+    float: left;
+
+}
+
+#foot-bar li:hover{
+    float: left;
+    background-color: #111;
+}
+
+#foot-bar li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1vh;
+    padding-bottom: 3vh;
+    text-decoration: none;
+}
