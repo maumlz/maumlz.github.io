@@ -1,0 +1,28 @@
+.post-page{
+    padding: 2.5%;
+}
+
+.post-title{
+    padding: 1.5% 0;
+    font-size: 7.5vh;
+    height: 10%;
+}
+
+.post-meta{
+    font-style: italic;
+    padding: 0.5% 0;
+}
+
+.post{
+    padding: 1% 2.5%;
+    text-align: justify;
+    line-height: 50px;
+}
+
+.post img{
+    width: 40vw;
+}
+
+.post img:hover {
+    box-shadow: 0 0 20px 1px rgba(0, 140, 186, 0.5);
+}

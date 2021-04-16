@@ -22,8 +22,15 @@
 
 #nav-bar li a:hover:not(.current) {
     background-color: #111;
+    transition: 1s;
+}
+
+#nav-bar li a:active:not(.current) {
+    background-color: #fff;
+    transition: 1s;
+
 }
 
 .current{
-    background-color: green;
+    background-color: #111;
 }

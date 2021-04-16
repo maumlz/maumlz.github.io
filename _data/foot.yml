@@ -1,4 +1,9 @@
 - name: email
   link: mailto:mauricio_esteban@live.com
+  icon: envelope
 - name: github.com/maumlz
   link: https://github.com/maumlz
+  icon: github
+- name: linkedin
+  link: https://www.linkedin.com/in/mauricio-melendez-246360151/
+  icon: linkedin

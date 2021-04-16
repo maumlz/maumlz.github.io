@@ -3,8 +3,6 @@ layout: post
 title: "Invincible Draft"
 date: 2020-10-30
 ---
-# Invincible Draft
-
 Invincible es una serie creada por Robert Kirkman junto con el artista Corey Walker, Walker se encargó de dibujar los primeros 7 números y para el octavo entra Ryan Ottley que se queda por la mayoría de la serie, con Walker regresando en los números **?-?**. La serie cuenta con 144 issues o números y fue lanzada en enero de 2003 como parte de la nueva alineación de superhéroes de Image Comics (de ese entonces), el personaje tuvo una aparición previa en otro titulo de Image, Tech Jacket en Noviembre del año anterior.
 
 

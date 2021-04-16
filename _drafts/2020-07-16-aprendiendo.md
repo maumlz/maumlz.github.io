@@ -12,6 +12,7 @@ También pasé todo un día buscando como cambiar, o mejor dicho, personalizar l
 Por otro lado, en mi quest por personalizar la apariencia de Windows me encontré con [Rainmeter]() la cual es Software Open Source que permite personalizar Windows hasta cierto punto, básicamente puedes agregar los llamados "widgets" pero que pueden mostrar información de otro tipo i.e. sonido, recursos del CPU, clima, etc. Yo por lo pronto solo instale uno que permite visualizar el sonido que se está escuchando en el equipo. Eso me llevo a otra herramienta OS, Spicetify, la cual permite personalizar Spotify cambiando los colores de la interfaz y el diseño en general. Terminé eligiendo algo sencillo y minimalista, all-black.
 
 Por último, estuve trabajando con P5js y su librería adicional que maneja sonido y, oh boy, en que pedo me metí, casi dos días experimentando con sus funciones e intentando reaplicar un visualizador de sonido como el que aparece en la película de ISPV, el estéreo que tiene el tío Aaron.
+
 ![Audio Visualizer](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.9sxJdwwF60kK8H6R2PeoHgHaE8%26pid%3DApi&f=1 "Es cuando nos presentan al tío Aaron")
 
 # Recomendación
