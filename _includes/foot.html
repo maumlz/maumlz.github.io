@@ -1,9 +1,0 @@
-<footer id='foot-bar'>
-  <ul>
-  {% for item in site.data.foot %}
-    <li><a href="{{ item.link }}" {% if page.url == item.link %}style="color: red;"{% endif %}>
-     <i class="fa fa-{{ item.icon }}"></i> {{ item.name }}
-    </a></li>
-  {% endfor %}
-  </ul>
-</footer>
