@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-resume',
@@ -6,4 +6,16 @@ import { Component } from '@angular/core';
   templateUrl: './resume.html',
   styleUrl: './resume.css',
 })
-export class Resume {}
+export class Resume implements OnInit {
+
+  public text: string; 
+
+  constructor() {
+    this.text = 'Hello, world!';
+   }
+
+  ngOnInit(): void {
+
+  }
+
+}

@@ -24,7 +24,8 @@
                 "input": "public"
               }
             ],
-            "styles": ["src/styles.css"]
+            "styles": ["src/styles.css"],
+            "polyfills": ["@angular/localize/init"]
           },
           "configurations": {
             "production": {
@@ -65,7 +66,10 @@
         "test": {
           "builder": "@angular/build:unit-test"
         }
-      }
+      },
+      "i18n": {
+        "sourceLocale": "en-US"
+       }
     }
   }
 }
