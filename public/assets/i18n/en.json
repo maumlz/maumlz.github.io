@@ -1,0 +1,99 @@
+{
+    "resume": {
+        "professional_summary": {
+            "title": "Professional Summary",
+            "content": "Full-Stack Developer with experience in Angular and Spring Boot projects, seeking to contribute to scalable web applications and continue growing in software engineering, web development, and database management."
+        },
+        "knowledge": {
+            "title": "Knowledge",
+            "content": "Continuous development and integration of microservices and web applications using tools like GitHub, Jira Cloud and OpenShift."
+        },
+        "education": {
+            "title": "Education",
+            "content1": "Bachelor's Degree in Applied Mathematics and Computing",
+            "content2": "Diploma in Statistical Techniques and Data Mining",
+            "college": "<em> — Facultad de Estudios Superiores Acatlán, </em> UNAM."
+        },
+        "skills": {
+            "title": "Skills",
+            "languages":"<b>Languages</b>: Java, TypeScript, JavaScript, C#, PHP, SQL, C, C++",
+            "front-end":"<b>Front-End</b>: Angular, React.js, HTML, CSS, Bootstrap, Three.js",
+            "back-end":"<b>Back-end</b>: Spring Boot, ASP.NET MVC, JPA, Hibernate",
+            "databases":"<b>Databases</b>: PostgreSQL, MySQL, MongoDB, Sybase",
+            "tools-platforms":"<b>Tools & Platforms</b>: GitHub, OpenShift, Heroku, SonarQube, JUnit, Mockito, Unity, XAMPP"
+        },
+        "languages": {
+          "title": "Languages",
+          "english": "<b>English</b>: Advanced",
+          "spanish": "<b>Spanish</b>: Native",
+          "german": "<b>German</b>: Basic"
+        },
+        "experience": {
+            "title": "Experience",
+            "banregio": {
+                "title": "Banregio",
+                "position": "Senior Analyst Programmer",
+                "duration": "Dec 2021 - Now",
+                "description": {
+                    "item1": "Implemented microservices using <b>Spring Boot</b>, <b>Hibernate</b>, <b>JPA</b>, and <b>PostgreSQL</b> for different onboarding processes such as the purchase of new products offered by the bank, including bank accounts, credit cards, and personal or business insurance.",
+                    "item2": "Took over the <b>biometric application</b>, managing the front-end and back-end of the component, including the integration of new biometric authentication flows with <b>Incode</b>.",
+                    "item3": "Integrated the <b>Application Performance Monitoring</b> system provided by <b>Elastic</b> into various <b>Angular</b> projects for improved monitoring of the application.",
+                    "item4": "Created components and pages for new products, as well as managed and optimized existing ones.",
+                    "item5": "With the help of <b>GitHub Copilot</b>, developed unit tests using <b>Jest</b> and <b>JUnit</b>.",
+                    "item6": "Provided incident support involving analysis, root cause reporting, and solution development when required using <b>Jira Cloud</b>.",
+                    "item7": "Continuous development and integration workflows using tools such as <b>Jira Cloud</b>, <b>OpenShift</b>, and <b>GitHub</b>."
+                }
+            },
+            "code_builders": {
+                "title": "Code Builders",
+                "position": "Full-Stack Developer",
+                "duration": "June 2021 - Dec 2021",
+                "description": {
+                    "item1": "Participated in the migration of a towing and vehicle repair management system using ASP.NET MVC and C#.",
+                    "item2": "Developed front-end views and interfaces using Bootstrap and JavaScript.",
+                    "item3": "Contributed to back-end development by migrating legacy system functionality and implementing client-requested improvements."
+                }
+            },
+            "polyhedron_universe": {
+                "title": "Polyhedron Universe",
+                "position": "Programmer",
+                "duration": "Aug 2020 - Apr 2021",
+                "description": {
+                    "item1": "Freelance multimedia web project focused on creative experimentation and 3D graphics development. I was part of the 3D graphics environment development team, which was built using the Three.js library and the React.js framework."
+                }
+            },
+            "dvrv": {
+                "title": "Visualization and Virtual Reality Department",
+                "position": "Programmer",
+                "duration": "Oct 2020 - Apr 2021",
+                "description": {
+                    "item1": "During my time at DVRV, I took part in different tasks related to <em>Augmented Reality</em> and <em>Virtual Reality</em>. These tasks involved testing augmented reality solutions and developing a mini tutorial for the Oculus Quest VR headset using Unity."
+                }
+            },
+            "othala": {
+                "title": "Othala",
+                "position": "Programmer",
+                "duration": "Jan 2019 - Sep 2020",
+                "description": {
+                    "item1": "A personal project that, along with friends and classmates, was aimed at video game development using the <b>Unity</b> engine. During this time, we completed two projects:",
+                    "sub": {
+                        "item1": "<b> Caro: </b> <br>A game developed for a contest at our university in which we won first place. A PC game featuring four mini-games and a short but narrative-driven story.",
+                        "item2":"<b> Save the Aliens: </b> <br> Developed during a seminar at the Center of Digital Culture (CCD) in Mexico City. <br>Aimed at mobile devices. A skill-based mobile game in which players rescue aliens while attempting to beat their high scores."
+                    }
+                }
+            },
+            "hera": {
+                "title": "Sistema Hera",
+                "position": "Back-end / Database",
+                "duration": "Aug - Dec 2018",
+                "description": {
+                    "item1": "Developed a web-based management system for a high school. I designed and built the database while also contributing to back-end development using PHP. This was a project developed for the class of Software Engineering; five teams delivered solutions, and, among all the projects, my team's solution was chosen as the best."
+                }
+            }
+        },
+        "hobbies": {
+            "title": "Hobbies",
+            "content": "Interests include reading science fiction and history, listening to music, film photography, and DIY technology projects."
+        }
+    }
+}

@@ -1,5 +1,5 @@
-<div class="container">
-  <div class="row">
+<div class="container-xxl">
+  <div class="row mb-5">
     <!-- TODO: Implement bootstrap gutter -->
     <div class="col">
       <div class="row">
@@ -9,10 +9,10 @@
         <img src="/assets/me.jpg" alt="me" />
         <div class="name">Mauricio Meléndez</div>
         <div class="sub-name">Software Developer</div>
-        <div>
-          <a href="mailto:mauricio_esteban@live.com">mauricio_esteban@live.com</a> <br />
-          <a href="https://maumlz.github.io">maumlz.github.io</a> <br />
-          <a href="tel:+528111813408">+528111813408</a>
+        <div class="contact">
+          <a href="mailto:mauricio_esteban@live.com" class="email">mauricio_esteban@live.com</a> <br />
+          <a href="https://maumlz.github.io" class="website">maumlz.github.io</a> <br />
+          <a href="tel:+528111813408" class="phone">+528111813408</a>
         </div>
         <div>
           <a href="../../assets/docs/CV - Mauricio Meléndez (EN).pdf" download>
@@ -23,169 +23,143 @@
     </div>
   </div>
 
-  <div class="row">
+  <div class="row mb-5">
     <div class="col">
       <div class="row">
         <div class="col fs-3 fw-bold">
-          <span class="align-middle">Professional Summary</span>
+          <span class="align-middle">{{ 'resume.professional_summary.title' | translate }}</span>
         </div>
         <div class="col fs-3 fw-bold">
-          <span class="align-middle">Knowledge</span>
+          <span class="align-middle">{{ 'resume.knowledge.title' | translate }}</span>
         </div>
       </div>
       <div class="row text-dark">
         <div class="col">
-          <p>
-            Full-Stack Developer with experience in Angular and Spring Boot projects, seeking to
-            contribute to scalable web applications and continue growing in software engineering,
-            web development, and database management.
-          </p>
+          <p> {{ 'resume.professional_summary.content' | translate }} </p>
         </div>
         <div class="col">
-          <p>
-            Continuous development and integration of microservices and web applications using tools
-            like GitHub, Jira Cloud and OpenShift.
-          </p>
+          <p>{{ 'resume.knowledge.content' | translate }}</p>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="row">
+  <div class="row mb-5">
     <div class="col">
       <div class="fs-3 fw-bold">
-        <span>Education.</span>
+        <span>{{ 'resume.education.title' | translate }}</span>
       </div>
       <div class="text-dark">
         <ul>
           <li>
-            <b> Bachelor's Degree in Applied Mathematics and Computing </b>
-            <em> — Facultad de Estudios Superiores Acatlán, </em>
-            UNAM.
+            <b> {{ 'resume.education.content1' | translate }} </b>
+            <span [innerHTML]="'resume.education.college' | translate"></span>
           </li>
           <li>
-            <b> Diploma in Statistical Techniques and Data Mining </b>
-            <em> — Facultad de Estudios Superiores Acatlán, </em>
-            UNAM.
+            <b> {{ 'resume.education.content2' | translate }} </b>
+            <span [innerHTML]="'resume.education.college' | translate"></span>
           </li>
         </ul>
       </div>
     </div>
   </div>
 
-  <div class="row">
+  <div class="row mb-5">
     <div class="col">
       <div class="row">
         <div class="col fs-3 fw-bold">
-          <span>Skills</span>
+          <span>{{ 'resume.skills.title' | translate }}</span>
         </div>
         <div class="col fs-3 fw-bold">
-          <span>Languages</span>
+          <span>{{ 'resume.languages.title' | translate }}</span>
         </div>
       </div>
       <div class="row text-dark">
         <div class="col">
           <ul>
-            <li><b>Languages</b>: Java, TypeScript, JavaScript, C#, PHP, SQL, C, C++</li>
-            <li><b>Front-End</b>: Angular, React.js, HTML, CSS, Bootstrap, Three.js</li>
-            <li><b>Back-end</b>: Spring Boot, ASP.NET MVC, JPA, Hibernate</li>
-            <li><b>Databases</b>: PostgreSQL, MySQL, MongoDB, Sybase</li>
-            <li>
-              <b>Tools & Platforms</b>: GitHub, OpenShift, Heroku, SonarQube, JUnit, Mockito, Unity,
-              XAMPP
-            </li>
+            <li [innerHTML]="'resume.skills.languages' | translate"></li>
+            <li [innerHTML]="'resume.skills.front-end' | translate"></li>
+            <li [innerHTML]="'resume.skills.back-end' | translate"></li>
+            <li [innerHTML]="'resume.skills.databases' | translate"></li>
+            <li [innerHTML]="'resume.skills.tools-platforms' | translate"></li>
           </ul>
         </div>
         <div class="col">
           <ul>
-            <li><b>English</b>: Advanced</li>
-            <li><b>Spanish</b>: Native</li>
-            <li><b>German</b>: Beginner</li>
+            <li [innerHTML]="'resume.languages.english' | translate"></li>
+            <li [innerHTML]="'resume.languages.spanish' | translate"></li>
+            <li [innerHTML]="'resume.languages.german' | translate"></li>
           </ul>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="row">
+  <div class="row mb-5">
     <div class="col">
       <div class="row">
         <div class="col">
-          <span class="fs-3 fw-bold">Experience</span>
+          <span class="fs-3 fw-bold">{{ 'resume.experience.title' | translate }}</span>
         </div>
       </div>
 
       <div class="row fw-bold">
         <div class="col">
           <div class="fs-5">
-            Banregio <span class="fs-6 text-dark">- Senior Analyst Programmer</span>
+            {{ 'resume.experience.banregio.title' | translate }} <span class="fs-6 text-dark">&mdash; {{ 'resume.experience.banregio.position' | translate }}</span>
           </div>
         </div>
       </div>
 
       <div class="row text-dark">
-        <div class="col-2">
-          <span class="fs-6">December 2021 - Now</span>
+        <div class="col-xl-1 col-12">
+          <span class="fs-6">{{ 'resume.experience.banregio.duration' | translate }}</span>
         </div>
         <div class="col">
           <ul>
-            <li>
-              Implemented microservices using <b>Spring Boot</b>, <b>Hibernate</b>, <b>JPA</b>, and
-              <b>PostgreSQL</b> for different onboarding processes such as the purchase of new
-              products offered by the bank, including bank accounts, credit cards, and personal or
-              business insurance.
-            </li>
-            <li>
-              Took over the <b>biometric application</b>, managing the front-end and back-end of the
-              component, including the integration of new biometric authentication flows with
-              <b>Incode</b>.
-            </li>
-            <li>
-              Integrated the <b>Application Performance Monitoring</b> system provided by
-              <b>Elastic</b> into various <b>Angular</b> projects for improved monitoring of the
-              application.
-            </li>
-            <li>
-              Created components and pages for new products, as well as managed and optimized
-              existing ones.
-            </li>
-            <li>
-              With the help of <b>GitHub Copilot</b>, developed unit tests using <b>Jest</b> and
-              <b>JUnit</b>.
-            </li>
-            <li>
-              Provided incident support involving analysis, root cause reporting, and solution
-              development when required using <b>Jira Cloud</b>.
-            </li>
-            <li>
-              Continuous development and integration workflows using tools such as
-              <b>Jira Cloud</b>, <b>OpenShift</b>, and <b>GitHub</b>.
-            </li>
+            <li [innerHTML]="'resume.experience.banregio.description.item1' | translate"></li>
+            <li [innerHTML]="'resume.experience.banregio.description.item2' | translate"></li>
+            <li [innerHTML]="'resume.experience.banregio.description.item3' | translate"></li>
+            <li [innerHTML]="'resume.experience.banregio.description.item4' | translate"></li>
+            <li [innerHTML]="'resume.experience.banregio.description.item5' | translate"></li>
+            <li [innerHTML]="'resume.experience.banregio.description.item6' | translate"></li>
+            <li [innerHTML]="'resume.experience.banregio.description.item7' | translate"></li>
           </ul>
         </div>
       </div>
 
       <div class="row fw-bold">
         <div class="col">
-          <div class="fs-5">Code Builders <span class="fs-6 text-dark">- Programmer.</span></div>
+          <div class="fs-5">{{ 'resume.experience.code_builders.title' | translate }} <span class="fs-6 text-dark">&mdash; {{ 'resume.experience.code_builders.position' | translate }}</span></div>
         </div>
       </div>
 
       <div class="row text-dark">
-        <div class="col-2">
-          <span class="fs-6">June 2021 - December 2021</span>
+        <div class="col-xl-1 col-12">
+          <span class="fs-6">{{ 'resume.experience.code_builders.duration' | translate }}</span>
         </div>
         <div class="col">
           <ul>
-            <li>
-              Participated in the migration of a towing and vehicle repair management system using
-              ASP.NET MVC and C#.
-            </li>
-            <li>Developed front-end views and interfaces using Bootstrap and JavaScript.</li>
-            <li>
-              Contributed to back-end development by migrating legacy system functionality and
-              implementing client-requested improvements.
-            </li>
+            <li [innerHTML]="'resume.experience.code_builders.description.item1' | translate"></li>
+            <li [innerHTML]="'resume.experience.code_builders.description.item2' | translate"></li>
+            <li [innerHTML]="'resume.experience.code_builders.description.item3' | translate"></li>
+          </ul>
+        </div>
+      </div>
+
+            <div class="row fw-bold">
+        <div class="col">
+          <div class="fs-5">{{ 'resume.experience.polyhedron_universe.title' | translate }} <span class="fs-6 text-dark">&mdash; {{ 'resume.experience.polyhedron_universe.position' | translate }}</span></div>
+        </div>
+      </div>
+
+      <div class="row text-dark">
+        <div class="col-xl-1 col-12">
+          <span class="fs-6">{{ 'resume.experience.polyhedron_universe.duration' | translate }}</span>
+        </div>
+        <div class="col">
+          <ul>
+            <li [innerHTML]="'resume.experience.polyhedron_universe.description.item1' | translate"></li>
           </ul>
         </div>
       </div>
@@ -193,115 +167,71 @@
       <div class="row fw-bold">
         <div class="col">
           <div class="fs-5">
-            Visualization and Virtual Reality Department.
-            <span class="fs-6 text-dark">- Programmer.</span>
+            {{ 'resume.experience.dvrv.title' | translate }}
+            <span class="fs-6 text-dark">&mdash; {{ 'resume.experience.dvrv.position' | translate }}</span>
           </div>
         </div>
       </div>
 
       <div class="row text-dark">
-        <div class="col-2">
-          <span class="fs-6"> October 2020 - April 2021 </span>
+        <div class="col-xl-1 col-12">
+          <span class="fs-6">{{ 'resume.experience.dvrv.duration' | translate }}</span>
         </div>
         <div class="col">
           <ul>
-            <li>
-              During my time at DVRV, I took part in different tasks related to
-              <em>Augmented Reality</em> and <em>Virtual Reality</em>. These tasks involved testing
-              augmented reality solutions and developing a mini tutorial for the Oculus Quest VR
-              headset using Unity.
-            </li>
+            <li [innerHTML]="'resume.experience.dvrv.description.item1' | translate"></li>
           </ul>
         </div>
       </div>
 
       <div class="row fw-bold">
         <div class="col">
-          <div class="fs-5">Othala <span class="fs-6 text-dark">- Programmer.</span></div>
+          <div class="fs-5">{{ 'resume.experience.othala.title' | translate }} <span class="fs-6 text-dark">&mdash; {{ 'resume.experience.othala.position' | translate }}</span></div>
         </div>
       </div>
 
       <div class="row text-dark">
-        <div class="col-2">
-          <span class="fs-6">January 2019 - September 2020</span>
+        <div class="col-xl-1 col-12">
+          <span class="fs-6">{{ 'resume.experience.othala.duration' | translate }}</span>
         </div>
         <div class="col">
-          <p>
-            A personal project that, along with friends and classmates, was aimed at video game
-            development using the <b>Unity</b> engine. During this time, we completed two projects:
-          </p>
+          <p [innerHTML]="'resume.experience.othala.description.item1' | translate"></p>
           <ul>
-            <li>
-              <b> Caro: </b>
-              A game developed for a contest at our university in which we won first place. A PC
-              game featuring four mini-games and a short but narrative-driven story.
-            </li>
-            <li>
-              <b> Save the Aliens: </b>
-              Developed during a seminar at the Center of Digital Culture (CCD) in Mexico City.
-              Aimed at mobile devices. A skill-based mobile game in which players rescue aliens
-              while attempting to beat their high scores.
-            </li>
+            <li [innerHTML]="'resume.experience.othala.description.sub.item1' | translate"></li>
+            <li [innerHTML]="'resume.experience.othala.description.sub.item2' | translate"></li>
           </ul>
         </div>
       </div>
 
       <div class="row fw-bold">
         <div class="col">
-          <div class="fs-5">Freelance <span class="fs-6 text-dark">- Web Developer.</span></div>
+          <div class="fs-5">{{ 'resume.experience.hera.title' | translate }} <span class="fs-6 text-dark">&mdash; {{ 'resume.experience.hera.position' | translate }}</span></div>
         </div>
       </div>
 
       <div class="row text-dark">
-        <div class="col-2">
-          <span class="fs-6">2018 - 2019</span>
+        <div class="col-xl-1 col-12">
+          <span class="fs-6">{{ 'resume.experience.hera.duration' | translate }}</span>
         </div>
         <div class="col">
           <ul>
-            <li>
-              Developed a website for a local business using HTML, CSS, and JavaScript. The website
-              included features such as a contact form, an image gallery, and an embedded map for
-              location.
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="row fw-bold">
-        <div class="col">
-          <div class="fs-5">Sistema Hera <span>-Back-end / Database</span></div>
-        </div>
-      </div>
-
-      <div class="row text-dark">
-        <div class="col-2">
-          <span class="fs-6">August - December 2018</span>
-        </div>
-        <div class="col">
-          <ul>
-            <li>
-              Developed a web-based management system for a high school. I designed and built the
-              database while also contributing to back-end development using PHP. This was a project
-              developed for the class of Software Engineering; five teams delivered solutions, and,
-              among all the projects, my team's solution was chosen as the best.
-            </li>
+            <li [innerHTML]="'resume.experience.hera.description.item1' | translate"></li>
           </ul>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="row">
+  <div class="row mb-1">
     <div class="col">
       <div class="row fs-3 fw-bold">
         <div class="col">
-          <span>Hobbies</span>
+          <span [innerHTML]="'resume.hobbies.title' | translate"></span>
         </div>
       </div>
       <div class="row text-dark">
         <div class="col">
-          Interests include reading science fiction and history, listening to music, film photography,
-          and DIY technology projects.
+          <p [innerHTML]="'resume.hobbies.content' | translate"></p>
         </div>
       </div>
     </div>

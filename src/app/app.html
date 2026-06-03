@@ -3,4 +3,8 @@
     <a routerLink="/about">About</a> |
     <a routerLink="/resume">Resume</a>
 </nav>
+
+<button class="btn btn-primary" (click)="toggleLanguage()">
+  {{ currentLanguage === 'en' ? 'Español' : 'English' }}
+</button>
 <router-outlet></router-outlet>

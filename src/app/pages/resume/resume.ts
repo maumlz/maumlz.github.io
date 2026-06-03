@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-resume',
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './resume.html',
   styleUrl: './resume.css',
+  standalone: true
 })
 export class Resume implements OnInit {
 
