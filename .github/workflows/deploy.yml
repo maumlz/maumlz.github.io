@@ -28,17 +28,13 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
-      # 4. credentials
-      - name: Configure Git Author
-        run: |
-          git config --global user.email "mauricio.mlzg@gmail.com"
-          git config --global user.name "GitHub Actions"
-
-      # 5. Build Angular app for production
+      # 4. Build Angular app for production
       # REPLACE 'your-repo-name' with your actual GitHub repository name
       - name: Build Application
         run: npm run github-build
 
-      # 6. Deploy build artifacts to the gh-pages branch
+      # 5. Deploy build artifacts to the gh-pages branch
       - name: Deploy to GitHub Pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm run github-deploy
