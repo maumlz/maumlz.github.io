@@ -35,4 +35,4 @@ jobs:
 
       # 5. Deploy build artifacts to the gh-pages branch
       - name: Deploy to GitHub Pages
-        run: npm run angular-cli-ghpages
+        run: npm run github-deploy
