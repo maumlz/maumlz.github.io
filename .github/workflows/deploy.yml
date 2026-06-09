@@ -1,0 +1,38 @@
+name: Build and Deploy Angular App
+
+on:
+  push:
+    branches:
+      - story/angular_remake # Triggers the workflow every time you push to the main branch
+
+permissions:
+  contents: write # Required to allow the workflow to push to the gh-pages branch
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Fetch the repository code
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      # 2. Set up Node.js environment
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # Match your local Node version
+          cache: 'npm'       # Caches dependencies for faster subsequent runs
+
+      # 3. Clean install dependencies
+      - name: Install Dependencies
+        run: npm ci
+
+      # 4. Build Angular app for production
+      # REPLACE 'your-repo-name' with your actual GitHub repository name
+      - name: Build Application
+        run: npm run github-build
+
+      # 5. Deploy build artifacts to the gh-pages branch
+      - name: Deploy to GitHub Pages
+        run: npm run angular-cli-ghpages
