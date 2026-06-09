@@ -29,12 +29,16 @@ jobs:
         run: npm ci
 
       # 4. Build Angular app for production
-      # REPLACE 'your-repo-name' with your actual GitHub repository name
       - name: Build Application
         run: npm run github-build
+
+      - name: Configure Git Credentials
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
 
       # 5. Deploy build artifacts to the gh-pages branch
       - name: Deploy to GitHub Pages
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
         run: npm run github-deploy
