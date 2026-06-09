@@ -25,11 +25,11 @@
 
   <div class="row mb-5">
     <div class="col">
-      <div class="row">
+      <div class="row pb-3">
         <div class="col fs-3 fw-bold">
           <span class="align-middle">{{ 'resume.professional_summary.title' | translate }}</span>
         </div>
-        <div class="col fs-3 fw-bold">
+        <div class="col fs-3 fw-bold pb-3">
           <span class="align-middle">{{ 'resume.knowledge.title' | translate }}</span>
         </div>
       </div>
@@ -46,27 +46,31 @@
 
   <div class="row mb-5">
     <div class="col">
-      <div class="fs-3 fw-bold">
-        <span>{{ 'resume.education.title' | translate }}</span>
+      <div class="row pb-2">
+        <div class="fs-3 fw-bold pb-3">
+          <span>{{ 'resume.education.title' | translate }}</span>
+        </div>
       </div>
-      <div class="text-dark">
-        <ul>
-          <li>
-            <b> {{ 'resume.education.content1' | translate }} </b>
-            <span [innerHTML]="'resume.education.college' | translate"></span>
-          </li>
-          <li>
-            <b> {{ 'resume.education.content2' | translate }} </b>
-            <span [innerHTML]="'resume.education.college' | translate"></span>
-          </li>
-        </ul>
+      <div class="row text-dark">
+        <div class="col">
+          <ul>
+            <li>
+              <b> {{ 'resume.education.content1' | translate }} </b>
+              <span [innerHTML]="'resume.education.college' | translate"></span>
+            </li>
+            <li>
+              <b> {{ 'resume.education.content2' | translate }} </b>
+              <span [innerHTML]="'resume.education.college' | translate"></span>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
 
   <div class="row mb-5">
     <div class="col">
-      <div class="row">
+      <div class="row pb-3">
         <div class="col fs-3 fw-bold">
           <span>{{ 'resume.skills.title' | translate }}</span>
         </div>
@@ -103,7 +107,7 @@
         </div>
       </div>
 
-      <div class="row fw-bold">
+      <div class="row fw-bold pt-4">
         <div class="col">
           <div class="fs-5">
             {{ 'resume.experience.banregio.title' | translate }} <span class="fs-6 text-dark">&mdash; {{ 'resume.experience.banregio.position' | translate }}</span>
@@ -128,7 +132,7 @@
         </div>
       </div>
 
-      <div class="row fw-bold">
+      <div class="row fw-bold pt-4">
         <div class="col">
           <div class="fs-5">{{ 'resume.experience.code_builders.title' | translate }} <span class="fs-6 text-dark">&mdash; {{ 'resume.experience.code_builders.position' | translate }}</span></div>
         </div>
@@ -147,7 +151,7 @@
         </div>
       </div>
 
-            <div class="row fw-bold">
+      <div class="row fw-bold pt-4">
         <div class="col">
           <div class="fs-5">{{ 'resume.experience.polyhedron_universe.title' | translate }} <span class="fs-6 text-dark">&mdash; {{ 'resume.experience.polyhedron_universe.position' | translate }}</span></div>
         </div>
@@ -164,7 +168,7 @@
         </div>
       </div>
 
-      <div class="row fw-bold">
+      <div class="row fw-bold pt-4">
         <div class="col">
           <div class="fs-5">
             {{ 'resume.experience.dvrv.title' | translate }}
@@ -184,7 +188,7 @@
         </div>
       </div>
 
-      <div class="row fw-bold">
+      <div class="row fw-bold pt-4">
         <div class="col">
           <div class="fs-5">{{ 'resume.experience.othala.title' | translate }} <span class="fs-6 text-dark">&mdash; {{ 'resume.experience.othala.position' | translate }}</span></div>
         </div>
@@ -203,7 +207,7 @@
         </div>
       </div>
 
-      <div class="row fw-bold">
+      <div class="row fw-bold pt-4">
         <div class="col">
           <div class="fs-5">{{ 'resume.experience.hera.title' | translate }} <span class="fs-6 text-dark">&mdash; {{ 'resume.experience.hera.position' | translate }}</span></div>
         </div>
@@ -224,7 +228,7 @@
 
   <div class="row mb-1">
     <div class="col">
-      <div class="row fs-3 fw-bold">
+      <div class="row fs-3 fw-bold pb-3">
         <div class="col">
           <span [innerHTML]="'resume.hobbies.title' | translate"></span>
         </div>
