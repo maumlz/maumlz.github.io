@@ -1,1 +1,0 @@
-import{Aa as n,Ba as m,Ea as a,qa as o}from"./chunk-LPKAO4E2.js";var s=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=o({type:t,selectors:[["app-home"]],decls:2,vars:0,template:function(e,p){e&1&&(n(0,"p"),a(1,"home works!"),m())},encapsulation:2})};export{s as Home};
