@@ -2,10 +2,11 @@
     font-family: Avenir, Verdana, sans-serif;
 }
 
-.container-xxl {
+.resume {
     background-color: var(--secondary-color);
     color: var(--main-color);
 }
+
 .header-container {
     display: grid;
 
@@ -39,7 +40,7 @@
 
 @media screen {
 
-    .container-xxl {
+    .container {
         > .row {
             box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.2);
             border-radius: 25px;
@@ -62,7 +63,7 @@
         background-color: rgb(241, 243, 244);
     }
 
-    .container-xxl
+    .container
     {
         padding: 0.5cm;
     }
