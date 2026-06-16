@@ -1,55 +1,58 @@
 <div class="resume">
   <div class="container">
+    <!-- HEADER -->
     <div class="row mb-5 p-0 header-container">
       <app-header-scene />
       <!-- <canvas class="d-none"></canvas> -->
       <div class="profile">
-        <img src="/assets/me.jpg" alt="me" class="rounded-circle w-25" />
-        <div class="name">Mauricio Meléndez</div>
-        <div class="sub-name">Software Developer</div>
+        <div>
+          <img src="/assets/me.jpg" alt="me" class="rounded-circle w-25" />
+          <div class="name">Mauricio Meléndez</div>
+          <div class="sub-name">Software Developer</div>
+        </div>
         <div class="contact">
           <a href="mailto:mauricio_esteban@live.com" class="email">mauricio_esteban@live.com</a>
           <br />
           <a href="https://maumlz.github.io" class="website">maumlz.github.io</a> <br />
           <a href="tel:+528111813408" class="phone">+528111813408</a>
         </div>
-        <div>
+        <div class="download">
           <a href="../../assets/docs/CV - Mauricio Meléndez (EN).pdf" download>
             <button class="btn btn-info download">Download Resume</button>
           </a>
         </div>
       </div>
     </div>
-
+    <!-- SUMMARY -->
     <div class="row mb-5">
       <div class="col">
-        <div class="row pb-3">
-          <div class="col fs-3 fw-bold">
+        <div class="row">
+          <div class="col fw-bold title1">
             <span class="align-middle">{{ 'resume.professional_summary.title' | translate }}</span>
           </div>
-          <div class="col fs-3 fw-bold pb-3">
+          <div class="col fw-bold title1">
             <span class="align-middle">{{ 'resume.knowledge.title' | translate }}</span>
           </div>
         </div>
         <div class="row text-dark">
-          <div class="col">
+          <div class="col content1">
             <p>{{ 'resume.professional_summary.content' | translate }}</p>
           </div>
-          <div class="col">
+          <div class="col content1">
             <p>{{ 'resume.knowledge.content' | translate }}</p>
           </div>
         </div>
       </div>
     </div>
-
+    <!-- EDUCATION -->
     <div class="row mb-5">
       <div class="col">
         <div class="row pb-2">
-          <div class="fs-3 fw-bold pb-3">
+          <div class="fw-bold title2">
             <span>{{ 'resume.education.title' | translate }}</span>
           </div>
         </div>
-        <div class="row text-dark">
+        <div class="row text-dark content2">
           <div class="col">
             <ul>
               <li>
@@ -65,19 +68,19 @@
         </div>
       </div>
     </div>
-
+    <!-- SKILLS -->
     <div class="row mb-5">
       <div class="col">
-        <div class="row pb-3">
-          <div class="col fs-3 fw-bold">
+        <div class="row title2">
+          <div class="col fw-bold">
             <span>{{ 'resume.skills.title' | translate }}</span>
           </div>
-          <div class="col fs-3 fw-bold">
+          <div class="col fw-bold">
             <span>{{ 'resume.languages.title' | translate }}</span>
           </div>
         </div>
         <div class="row text-dark">
-          <div class="col">
+          <div class="col content3">
             <ul>
               <li [innerHTML]="'resume.skills.languages' | translate"></li>
               <li [innerHTML]="'resume.skills.front-end' | translate"></li>
@@ -86,7 +89,7 @@
               <li [innerHTML]="'resume.skills.tools-platforms' | translate"></li>
             </ul>
           </div>
-          <div class="col">
+          <div class="col content3">
             <ul>
               <li [innerHTML]="'resume.languages.english' | translate"></li>
               <li [innerHTML]="'resume.languages.spanish' | translate"></li>
@@ -96,20 +99,20 @@
         </div>
       </div>
     </div>
-
+    <!-- EXPERIENCE -->
     <div class="row mb-5">
       <div class="col">
         <div class="row">
-          <div class="col">
-            <span class="fs-3 fw-bold">{{ 'resume.experience.title' | translate }}</span>
+          <div class="col title2">
+            <span class="fw-bold">{{ 'resume.experience.title' | translate }}</span>
           </div>
         </div>
 
         <div class="row fw-bold pt-4">
-          <div class="col">
-            <div class="fs-5">
+          <div class="col title3">
+            <div class="">
               {{ 'resume.experience.banregio.title' | translate }}
-              <span class="fs-6 text-dark"
+              <span class="text-dark"
                 >&mdash; {{ 'resume.experience.banregio.position' | translate }}</span
               >
             </div>
@@ -118,9 +121,9 @@
 
         <div class="row text-dark">
           <div class="col-xl-1 col-12">
-            <span class="fs-6">{{ 'resume.experience.banregio.duration' | translate }}</span>
+            <span class="">{{ 'resume.experience.banregio.duration' | translate }}</span>
           </div>
-          <div class="col">
+          <div class="col content3">
             <ul>
               <li [innerHTML]="'resume.experience.banregio.description.item1' | translate"></li>
               <li [innerHTML]="'resume.experience.banregio.description.item2' | translate"></li>
@@ -134,10 +137,10 @@
         </div>
 
         <div class="row fw-bold pt-4">
-          <div class="col">
-            <div class="fs-5">
+          <div class="col title3">
+            <div class="">
               {{ 'resume.experience.code_builders.title' | translate }}
-              <span class="fs-6 text-dark"
+              <span class="text-dark"
                 >&mdash; {{ 'resume.experience.code_builders.position' | translate }}</span
               >
             </div>
@@ -146,9 +149,9 @@
 
         <div class="row text-dark">
           <div class="col-xl-1 col-12">
-            <span class="fs-6">{{ 'resume.experience.code_builders.duration' | translate }}</span>
+            <span class="">{{ 'resume.experience.code_builders.duration' | translate }}</span>
           </div>
-          <div class="col">
+          <div class="col content3">
             <ul>
               <li
                 [innerHTML]="'resume.experience.code_builders.description.item1' | translate"
@@ -164,10 +167,10 @@
         </div>
 
         <div class="row fw-bold pt-4">
-          <div class="col">
-            <div class="fs-5">
+          <div class="col title3">
+            <div class="">
               {{ 'resume.experience.polyhedron_universe.title' | translate }}
-              <span class="fs-6 text-dark"
+              <span class="text-dark"
                 >&mdash; {{ 'resume.experience.polyhedron_universe.position' | translate }}</span
               >
             </div>
@@ -176,11 +179,11 @@
 
         <div class="row text-dark">
           <div class="col-xl-1 col-12">
-            <span class="fs-6">{{
+            <span class="">{{
               'resume.experience.polyhedron_universe.duration' | translate
             }}</span>
           </div>
-          <div class="col">
+          <div class="col content3">
             <ul>
               <li
                 [innerHTML]="'resume.experience.polyhedron_universe.description.item1' | translate"
@@ -190,10 +193,10 @@
         </div>
 
         <div class="row fw-bold pt-4">
-          <div class="col">
-            <div class="fs-5">
+          <div class="col title3">
+            <div class="">
               {{ 'resume.experience.dvrv.title' | translate }}
-              <span class="fs-6 text-dark"
+              <span class="text-dark"
                 >&mdash; {{ 'resume.experience.dvrv.position' | translate }}</span
               >
             </div>
@@ -202,9 +205,9 @@
 
         <div class="row text-dark">
           <div class="col-xl-1 col-12">
-            <span class="fs-6">{{ 'resume.experience.dvrv.duration' | translate }}</span>
+            <span class="">{{ 'resume.experience.dvrv.duration' | translate }}</span>
           </div>
-          <div class="col">
+          <div class="col content3">
             <ul>
               <li [innerHTML]="'resume.experience.dvrv.description.item1' | translate"></li>
             </ul>
@@ -212,10 +215,10 @@
         </div>
 
         <div class="row fw-bold pt-4">
-          <div class="col">
-            <div class="fs-5">
+          <div class="col title3">
+            <div class="">
               {{ 'resume.experience.othala.title' | translate }}
-              <span class="fs-6 text-dark"
+              <span class="text-dark"
                 >&mdash; {{ 'resume.experience.othala.position' | translate }}</span
               >
             </div>
@@ -224,9 +227,9 @@
 
         <div class="row text-dark">
           <div class="col-xl-1 col-12">
-            <span class="fs-6">{{ 'resume.experience.othala.duration' | translate }}</span>
+            <span class="">{{ 'resume.experience.othala.duration' | translate }}</span>
           </div>
-          <div class="col">
+          <div class="col content3">
             <p [innerHTML]="'resume.experience.othala.description.item1' | translate"></p>
             <ul>
               <li [innerHTML]="'resume.experience.othala.description.sub.item1' | translate"></li>
@@ -236,10 +239,10 @@
         </div>
 
         <div class="row fw-bold pt-4">
-          <div class="col">
-            <div class="fs-5">
+          <div class="col title3">
+            <div class="">
               {{ 'resume.experience.hera.title' | translate }}
-              <span class="fs-6 text-dark"
+              <span class="text-dark"
                 >&mdash; {{ 'resume.experience.hera.position' | translate }}</span
               >
             </div>
@@ -248,9 +251,9 @@
 
         <div class="row text-dark">
           <div class="col-xl-1 col-12">
-            <span class="fs-6">{{ 'resume.experience.hera.duration' | translate }}</span>
+            <span class="">{{ 'resume.experience.hera.duration' | translate }}</span>
           </div>
-          <div class="col">
+          <div class="col content3">
             <ul>
               <li [innerHTML]="'resume.experience.hera.description.item1' | translate"></li>
             </ul>
@@ -258,16 +261,16 @@
         </div>
       </div>
     </div>
-
+    <!-- HOBBIES -->
     <div class="row mb-1">
       <div class="col">
-        <div class="row fs-3 fw-bold pb-3">
-          <div class="col">
+        <div class="row  fw-bold pb-3">
+          <div class="col title3">
             <span [innerHTML]="'resume.hobbies.title' | translate"></span>
           </div>
         </div>
         <div class="row text-dark">
-          <div class="col">
+          <div class="col content3">
             <p [innerHTML]="'resume.hobbies.content' | translate"></p>
           </div>
         </div>

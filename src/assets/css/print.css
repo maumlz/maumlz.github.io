@@ -1,0 +1,111 @@
+/* ==========================================================================
+   CSS PRINT TEMPLATE
+   Optimized for physical paper and PDF generation
+   ========================================================================== */
+
+@media print {
+  
+  /* 1. Page & Margin Configuration */
+  @page {
+    size: A4 portrait; /* Standard sizes: letter, A4, A3, etc. */
+    margin: 20mm 15mm 20mm 15mm; /* Top, Right, Bottom, Left */
+  }
+
+  /* 2. Global Reset for Print */
+  html, body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif; /* Serif is easier to read on paper */
+    font-size: 12pt;
+    line-height: 1.5;
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* 3. Hide Unnecessary Interactive Elements */
+  nav, 
+  header .menu, 
+  footer .social-links,
+  sidebar, 
+  aside, 
+  .buttons, 
+  .noprint,
+  #cookie-banner,
+  form {
+    display: none !important;
+  }
+
+  /* 4. Layout Corrections */
+  main, .content, article {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    float: none !important;
+    display: block !important;
+  }
+
+  /* 5. Typography Enhancements */
+  h1, h2, h3, h4, h5, h6 {
+    color: #000000 !important;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* Clean headings */
+    page-break-after: avoid; /* Never leave a heading stranded at the bottom */
+  }
+
+  h1 { font-size: 24pt; margin-bottom: 20pt; }
+  h2 { font-size: 18pt; margin-top: 20pt; margin-bottom: 12pt; }
+  h3 { font-size: 14pt; margin-top: 16pt; margin-bottom: 8pt; }
+
+  p, li {
+    orphans: 3; /* Prevents split text (minimum lines at bottom of page) */
+    widows: 3;  /* Prevents split text (minimum lines at top of page) */
+  }
+
+  /* 6. Links Handling */
+  a {
+    color: #000000 !important;
+    text-decoration: underline;
+  }
+  
+  /* Append full absolute URLs after text links for reference */
+  a[href^="http"]:after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    font-style: italic;
+    color: #555555;
+  }
+
+  /* 7. Images & Media */
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid; /* Prevent images from splitting across pages */
+  }
+
+  /* 8. Data Tables Optimization */
+  table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    page-break-inside: auto;
+  }
+
+  tr {
+    page-break-inside: avoid; /* Keep rows unified */
+    page-break-after: auto;
+  }
+
+  thead {
+    display: table-header-group; /* Repeat header table rows on every physical page */
+  }
+
+  th, td {
+    border: 1px solid #dddddd !important;
+    padding: 8px !important;
+    text-align: left;
+    font-size: 10pt;
+  }
+
+  /* 9. Utility Page-Break Classes */
+  .page-break {
+    page-break-before: always; /* Force content to a new page */
+  }
+}
