@@ -87,6 +87,7 @@
   .profile {
     display: flex;
     justify-content: space-between;
+    padding-bottom: 1.5em;
   }
 
   .name {
