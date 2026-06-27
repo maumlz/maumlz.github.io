@@ -1,0 +1,100 @@
+* {
+  /* Halo 3-inspired palette */
+  --h3-bg-dark: #02070d;
+  --h3-bg-blue: #061526;
+  --h3-bg-deep: #0a1f33;
+
+  --h3-panel: rgba(8, 28, 48, 0.85);
+  --h3-panel-light: rgba(18, 60, 90, 0.75);
+
+  --h3-cyan: #6fdcff;
+  --h3-cyan-soft: #3ba7d8;
+  --h3-cyan-muted: #1f6f99;
+
+  --h3-text: #d7f4ff;
+  --h3-text-muted: #7faec4;
+
+  --h3-gold: #d6a84f;
+  --h3-gold-soft: #f0c96a;
+
+  --h3-border: rgba(111, 220, 255, 0.35);
+  --h3-glow: rgba(111, 220, 255, 0.45);
+}
+
+/* Page background */
+.nav-container {
+  background:
+    radial-gradient(circle at top center, var(--h3-bg-deep), transparent 45%),
+    linear-gradient(180deg, var(--h3-bg-blue), var(--h3-bg-dark));
+  color: var(--h3-text);
+}
+
+/* Main menu container */
+.navigation {
+  background: var(--h3-panel);
+  border: 1px solid var(--h3-border);
+  color: var(--h3-text);
+  box-shadow:
+    0 0 25px var(--h3-glow),
+    inset 0 0 30px rgba(111, 220, 255, 0.08);
+}
+
+/* Menu title */
+.halo-title {
+  color: var(--h3-cyan);
+  text-shadow:
+    0 0 8px var(--h3-cyan),
+    0 0 18px var(--h3-glow);
+}
+
+/* Normal menu option */
+.route {
+  color: var(--h3-text-muted);
+  background: transparent;
+  border-left: 3px solid transparent;
+}
+
+/* Hover / selected menu option */
+.route:hover,
+.route.active {
+  color: var(--h3-text);
+  background: linear-gradient(
+    90deg,
+    rgba(111, 220, 255, 0.22),
+    rgba(111, 220, 255, 0.05),
+    transparent
+  );
+  border-left-color: var(--h3-cyan);
+  text-shadow: 0 0 8px var(--h3-cyan);
+}
+
+/* Important / highlighted option */
+.route.featured {
+  color: var(--h3-gold-soft);
+  border-left-color: var(--h3-gold);
+  text-shadow: 0 0 8px rgba(214, 168, 79, 0.6);
+}
+
+/* Secondary panels */
+.halo-panel {
+  background: var(--h3-panel-light);
+  border: 1px solid rgba(111, 220, 255, 0.22);
+  color: var(--h3-text);
+}
+
+/* Muted small text */
+.halo-muted {
+  color: var(--h3-text-muted);
+}
+
+/* Buttons */
+.halo-button {
+  background: rgba(31, 111, 153, 0.35);
+  border: 1px solid var(--h3-border);
+  color: var(--h3-text);
+}
+
+.halo-button:hover {
+  background: rgba(111, 220, 255, 0.22);
+  box-shadow: 0 0 14px var(--h3-glow);
+}

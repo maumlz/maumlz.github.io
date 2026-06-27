@@ -1,0 +1,32 @@
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    /* background-color: black; */
+}
+
+.navigation {
+    display: flex;
+    a {
+        /* color: #2d3237; */
+    }
+    a:hover {
+        /* background-color: #ff6600;
+        color: #fff */
+    }
+}
+
+.route {
+	padding: .5rem .75rem;
+	/* background-color: #0f160e00; */
+	font-family: Chikarego,Arial,sans-serif;
+	/* color: #00ffe5; */
+	font-size: 1.1rem;
+	line-height: 1.3;
+	font-weight: bold;
+	cursor: pointer;
+	flex-flow: column;
+	text-decoration: none;
+	display: flex;
+	position: relative;
+}

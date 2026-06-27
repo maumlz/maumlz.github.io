@@ -8,6 +8,14 @@
 }
 
 @media screen {
+
+  .resume {
+    padding-top: 1rem;
+
+    p {
+      margin: 0;
+    }
+  }
   .header-container {
     display: grid;
 
@@ -44,8 +52,6 @@
       box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.2);
       border-radius: 25px;
       transition: 0.5s;
-      margin: 1rem;
-      padding: 1rem;
     }
 
     > .row:hover {
