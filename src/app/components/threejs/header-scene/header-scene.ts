@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, ElementRef, NgZone, OnDestroy, viewChild } from '@angular/core';
 import * as THREE from 'three';
+import { BaseScene } from '../base-scene/base-scene';
 
 @Component({
   selector: 'app-header-scene',
@@ -7,17 +8,14 @@ import * as THREE from 'three';
   templateUrl: './header-scene.html',
   styleUrl: './header-scene.css',
 })
-export class HeaderScene implements AfterViewInit, OnDestroy{
+export class HeaderScene extends BaseScene implements AfterViewInit, OnDestroy{
 
-  private canvasRef = viewChild.required<ElementRef<HTMLCanvasElement>>('rendererCanvas');
-
-  private scene!: THREE.Scene;
-  private camera!: THREE.PerspectiveCamera;
-  private renderer!: THREE.WebGLRenderer;
   private cube!: THREE.Mesh;
   private animationFrameId!: number;
 
-  constructor(private ngZone: NgZone) {}
+  constructor(private ngZone: NgZone) {
+    super();
+  }
 
   ngAfterViewInit(): void {
     this.initThree();
@@ -35,29 +33,6 @@ export class HeaderScene implements AfterViewInit, OnDestroy{
       cancelAnimationFrame(this.animationFrameId);
     }
     this.renderer.dispose();
-  }
-
-  private initThree() {
-    const canvas = this.canvasRef().nativeElement;
-    console.log(this.canvasRef());
-
-    // 1. Create the Scene
-    this.scene = new THREE.Scene();
-    this.scene.background = new THREE.Color('#1e1e24');
-
-    // 2. Setup the Camera
-    this.camera = new THREE.PerspectiveCamera(
-      75,
-      canvas.clientWidth / canvas.clientHeight,
-      0.1,
-      1000
-    );
-    this.camera.position.z = 5;
-
-    // 3. Setup the Renderer
-    this.renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true });
-    this.renderer.setSize(canvas.clientWidth, canvas.clientHeight);
-    this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
   }
 
   private createCube(): void {

@@ -1,8 +1,8 @@
-<div class="nav-container">
+<div class="nav-container" [ngClass]="{ 'main-menu': this.route === '' }">
   <nav class="navigation">
-    <a class="route" [ngClass]="{ 'active': this.route === '' }" routerLink="/">Home</a>
-    <a class="route" [ngClass]="{ 'active': this.route === 'about' }" routerLink="/about">About</a>
-    <a class="route" [ngClass]="{ 'active': this.route === 'resume' }" routerLink="/resume">Resume</a>
+    <a class="route" routerLinkActive="active" routerLink="/" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+    <a class="route" routerLinkActive="active" routerLink="/about">About</a>
+    <a class="route" routerLinkActive="active" routerLink="/resume">Resume</a>
   </nav>
   <div class="halo-panel">
     <button class="btn btn-primary halo-button" (click)="toggleLanguage()">

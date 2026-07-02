@@ -1,12 +1,12 @@
 import { Component, inject } from '@angular/core';
-import { NavigationEnd, Router, RouterLink } from '@angular/router';
+import { NavigationEnd, Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { NgClass } from '@angular/common';
 import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-navbar',
-  imports: [RouterLink, NgClass],
+  imports: [RouterLink, NgClass, RouterLinkActive],
   templateUrl: './navbar.html',
   styleUrls: ['./navbar.css', './navbar-halo.css'],
 })
