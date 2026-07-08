@@ -21,14 +21,6 @@
   --h3-glow: rgba(111, 220, 255, 0.45);
 }
 
-/* Page background */
-.nav-container {
-  background:
-    radial-gradient(circle at top center, var(--h3-bg-deep), transparent 45%),
-    linear-gradient(180deg, var(--h3-bg-blue), var(--h3-bg-dark));
-  color: var(--h3-text);
-}
-
 /* Main menu container */
 .navigation {
   background: var(--h3-panel);
@@ -45,27 +37,6 @@
   text-shadow:
     0 0 8px var(--h3-cyan),
     0 0 18px var(--h3-glow);
-}
-
-/* Normal menu option */
-.route {
-  color: var(--h3-text-muted);
-  background: transparent;
-  border-left: 3px solid transparent;
-}
-
-/* Hover / selected menu option */
-.route:hover,
-.route.active {
-  color: var(--h3-text);
-  background: linear-gradient(
-    90deg,
-    rgba(111, 220, 255, 0.22),
-    rgba(111, 220, 255, 0.05),
-    transparent
-  );
-  border-left-color: var(--h3-cyan);
-  text-shadow: 0 0 8px var(--h3-cyan);
 }
 
 /* Important / highlighted option */

@@ -1,12 +1,29 @@
-<div class="nav-container" [ngClass]="{ 'main-menu': this.route === '' }">
-  <nav class="navigation">
-    <a class="route" routerLinkActive="active" routerLink="/" [routerLinkActiveOptions]="{ exact: true }">Home</a>
-    <a class="route" routerLinkActive="active" routerLink="/about">About</a>
-    <a class="route" routerLinkActive="active" routerLink="/resume">Resume</a>
+<div [ngClass]="{ 'main-menu': this.route === '' }">
+  <nav [ngClass]="{ 'flex-column': this.route === ''}" class="navbar navbar-expand d-flex justify-content-between px-3">
+    <ul [ngClass]="{ 'navbar-nav': this.route !== '', 'flex-column': this.route === '' }" class="nav">
+      <li class="nav-item">
+        <a
+          class="nav-link p-3"
+          routerLinkActive="active"
+          routerLink="/"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >Home</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link p-3" routerLinkActive="active" routerLink="/about">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link p-3" routerLinkActive="active" routerLink="/resume">Resume</a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav p-3">
+      <li class="nav-item">
+        <button class="btn btn-primary halo-button" (click)="toggleLanguage()">
+          {{ currentLanguage === 'en' ? 'Español' : 'English' }}
+        </button>
+      </li>
+    </ul>
   </nav>
-  <div class="halo-panel">
-    <button class="btn btn-primary halo-button" (click)="toggleLanguage()">
-      {{ currentLanguage === 'en' ? 'Español' : 'English' }}
-    </button>
-  </div>
 </div>
