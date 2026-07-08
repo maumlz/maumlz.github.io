@@ -1,0 +1,1 @@
+import{xa as t}from"./chunk-ES4PCCA6.js";var n=class e{static \u0275fac=function(o){return new(o||e)};static \u0275cmp=t({type:e,selectors:[["app-home"]],decls:0,vars:0,template:function(o,m){},encapsulation:2})};export{n as Home};
