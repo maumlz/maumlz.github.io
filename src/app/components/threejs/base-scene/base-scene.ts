@@ -1,4 +1,4 @@
-import { Component, ElementRef, NgZone, viewChild } from '@angular/core';
+import { Component, ElementRef, viewChild } from '@angular/core';
 import * as THREE from 'three';
 
 @Component({

@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, NgZone, OnDestroy, viewChild } from '@angular/core';
+import { AfterViewInit, Component, NgZone, OnDestroy } from '@angular/core';
 import { BaseScene } from '../base-scene/base-scene';
 
 @Component({
@@ -25,6 +25,8 @@ export class MainScene extends BaseScene implements AfterViewInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
+    cancelAnimationFrame(this.animationFrameId);
+    this.renderer?.dispose();
   }
 
   private animate = (): void => {

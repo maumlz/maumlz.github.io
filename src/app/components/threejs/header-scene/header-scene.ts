@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, NgZone, OnDestroy, viewChild } from '@angular/core';
+import { AfterViewInit, Component, NgZone, OnDestroy } from '@angular/core';
 import * as THREE from 'three';
 import { BaseScene } from '../base-scene/base-scene';
 

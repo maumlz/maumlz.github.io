@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { NavigationEnd, Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { NgClass } from '@angular/common';
@@ -10,7 +10,7 @@ import { filter } from 'rxjs';
   templateUrl: './navbar.html',
   styleUrls: ['./navbar.css', './navbar-halo.css'],
 })
-export class Navbar {
+export class Navbar implements OnInit {
 
   currentLanguage: string = 'en';
 

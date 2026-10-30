@@ -36,6 +36,12 @@ ng build
 
 This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
+## Linting
+
+Run `npm run lint` to check TypeScript and Angular templates, including template accessibility. Run `npm run lint:fix` to apply available automatic fixes.
+
+Rules are configured in `eslint.config.mjs` using the [Angular ESLint](https://github.com/angular-eslint/angular-eslint) recommended configurations. Generated files and the archived Ruby site are excluded. Prettier remains responsible for formatting.
+
 ## Running unit tests
 
 To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
