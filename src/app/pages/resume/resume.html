@@ -1,280 +1,92 @@
-<div class="resume">
-  <div class="container">
-    <!-- HEADER -->
-    <div class="row mb-5 header-container">
-      <app-header-scene />
-      <!-- <canvas class="d-none"></canvas> -->
-      <div class="profile">
-        <div>
-          <img src="/assets/me.jpg" alt="me" class="rounded-circle w-25" />
-          <div class="name">Mauricio Meléndez</div>
-          <div class="sub-name">Software Developer</div>
-        </div>
-        <div class="contact">
-          <a href="mailto:mauricio_esteban@live.com" class="email">mauricio_esteban@live.com</a>
-          <br />
-          <a href="https://maumlz.github.io" class="website">maumlz.github.io</a> <br />
-          <a href="tel:+528111813408" class="phone">+528111813408</a>
-        </div>
-        <div class="download">
-          <a href="../../assets/docs/CV - Mauricio Meléndez (EN).pdf" download>
-            <button class="btn btn-info download">Download Resume</button>
-          </a>
-        </div>
+<main class="resume">
+  <div class="container py-4">
+    <header class="profile resume-panel">
+      <img src="assets/me.jpg" alt="Mauricio Meléndez" width="128" height="128" />
+      <h1>Mauricio Meléndez</h1>
+      <p class="professional-title">{{ 'resume.professional_title' | translate }}</p>
+      <address>
+        <a href="mailto:mauricio_esteban@live.com">mauricio_esteban@live.com</a>
+        <a href="https://maumlz.github.io">maumlz.github.io</a>
+        <a href="tel:+528111813408">+528111813408</a>
+      </address>
+      <div class="noprint download">
+        <a
+          href="../../assets/docs/CV - Mauricio Meléndez (EN).pdf"
+          download
+          aria-disabled="true"
+          (click)="$event.preventDefault()"
+          aria-describedby="pdf-notice"
+        >
+          {{ 'resume.download' | translate }}
+        </a>
+        <p id="pdf-notice">{{ 'resume.pdf_notice' | translate }}</p>
       </div>
-    </div>
-    <!-- SUMMARY -->
-    <div class="row mb-5">
-      <div class="col p-3">
-        <div class="row">
-          <div class="col fw-bold title1">
-            <span class="align-middle">{{ 'resume.professional_summary.title' | translate }}</span>
+    </header>
+
+    <section class="resume-panel" aria-labelledby="summary-heading">
+      <h2 id="summary-heading">{{ 'resume.professional_summary.title' | translate }}</h2>
+      <p>{{ 'resume.professional_summary.content' | translate }}</p>
+      <p>{{ 'resume.professional_summary.details' | translate }}</p>
+    </section>
+
+    <section class="resume-panel" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">{{ 'resume.skills.title' | translate }}</h2>
+      <div class="skills-grid">
+        @for (group of 'resume.skills.groups' | translate; track group.title) {
+          <div>
+            <h3>{{ group.title }}</h3>
+            <p>{{ group.items }}</p>
           </div>
-          <div class="col fw-bold title1">
-            <span class="align-middle">{{ 'resume.knowledge.title' | translate }}</span>
-          </div>
-        </div>
-        <div class="row text-dark">
-          <div class="col content1">
-            <p>{{ 'resume.professional_summary.content' | translate }}</p>
-          </div>
-          <div class="col content1">
-            <p>{{ 'resume.knowledge.content' | translate }}</p>
-          </div>
-        </div>
+        }
       </div>
-    </div>
-    <!-- EDUCATION -->
-    <div class="row mb-5">
-      <div class="col p-3">
-        <div class="row pb-2">
-          <div class="fw-bold title2">
-            <span>{{ 'resume.education.title' | translate }}</span>
-          </div>
-        </div>
-        <div class="row text-dark content2">
-          <div class="col">
-            <ul>
-              <li>
-                <b> {{ 'resume.education.content1' | translate }} </b>
-                <span [innerHTML]="'resume.education.college' | translate"></span>
-              </li>
-              <li>
-                <b> {{ 'resume.education.content2' | translate }} </b>
-                <span [innerHTML]="'resume.education.college' | translate"></span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- SKILLS -->
-    <div class="row mb-5">
-      <div class="col p-3">
-        <div class="row title2">
-          <div class="col fw-bold">
-            <span>{{ 'resume.skills.title' | translate }}</span>
-          </div>
-          <div class="col fw-bold">
-            <span>{{ 'resume.languages.title' | translate }}</span>
-          </div>
-        </div>
-        <div class="row text-dark">
-          <div class="col content3">
-            <ul>
-              <li [innerHTML]="'resume.skills.languages' | translate"></li>
-              <li [innerHTML]="'resume.skills.front-end' | translate"></li>
-              <li [innerHTML]="'resume.skills.back-end' | translate"></li>
-              <li [innerHTML]="'resume.skills.databases' | translate"></li>
-              <li [innerHTML]="'resume.skills.tools-platforms' | translate"></li>
-            </ul>
-          </div>
-          <div class="col content3">
-            <ul>
-              <li [innerHTML]="'resume.languages.english' | translate"></li>
-              <li [innerHTML]="'resume.languages.spanish' | translate"></li>
-              <li [innerHTML]="'resume.languages.german' | translate"></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- EXPERIENCE -->
-    <div class="row mb-5">
-      <div class="col p-3">
-        <div class="row">
-          <div class="col title2">
-            <span class="fw-bold">{{ 'resume.experience.title' | translate }}</span>
-          </div>
-        </div>
+    </section>
 
-        <div class="row fw-bold pt-4">
-          <div class="col title3">
-            <div class="">
-              {{ 'resume.experience.banregio.title' | translate }}
-              <span class="text-dark"
-                >&mdash; {{ 'resume.experience.banregio.position' | translate }}</span
-              >
-            </div>
-          </div>
-        </div>
+    <section class="resume-panel" aria-labelledby="experience-heading">
+      <h2 id="experience-heading">{{ 'resume.experience.title' | translate }}</h2>
+      @for (key of experienceKeys; track key) {
+        <article>
+          <h3>{{ 'resume.experience.' + key + '.title' | translate }}</h3>
+          <p class="position">{{ 'resume.experience.' + key + '.position' | translate }}</p>
+          <p class="duration">{{ 'resume.experience.' + key + '.duration' | translate }}</p>
+          <ul>
+            @for (item of 'resume.experience.' + key + '.items' | translate; track $index) {
+              <li>{{ item }}</li>
+            }
+          </ul>
+        </article>
+      }
+    </section>
 
-        <div class="row text-dark">
-          <div class="col-xl-1 col-12">
-            <span class="">{{ 'resume.experience.banregio.duration' | translate }}</span>
-          </div>
-          <div class="col content3">
-            <ul>
-              <li [innerHTML]="'resume.experience.banregio.description.item1' | translate"></li>
-              <li [innerHTML]="'resume.experience.banregio.description.item2' | translate"></li>
-              <li [innerHTML]="'resume.experience.banregio.description.item3' | translate"></li>
-              <li [innerHTML]="'resume.experience.banregio.description.item4' | translate"></li>
-              <li [innerHTML]="'resume.experience.banregio.description.item5' | translate"></li>
-              <li [innerHTML]="'resume.experience.banregio.description.item6' | translate"></li>
-              <li [innerHTML]="'resume.experience.banregio.description.item7' | translate"></li>
-            </ul>
-          </div>
-        </div>
+    <section class="resume-panel" aria-labelledby="education-heading">
+      <h2 id="education-heading">{{ 'resume.education.title' | translate }}</h2>
+      <p>{{ 'resume.education.college' | translate }}</p>
+      <ul>
+        <li>{{ 'resume.education.content1' | translate }}</li>
+        <li>{{ 'resume.education.content2' | translate }}</li>
+      </ul>
+    </section>
 
-        <div class="row fw-bold pt-4">
-          <div class="col title3">
-            <div class="">
-              {{ 'resume.experience.code_builders.title' | translate }}
-              <span class="text-dark"
-                >&mdash; {{ 'resume.experience.code_builders.position' | translate }}</span
-              >
-            </div>
-          </div>
-        </div>
+    <section class="resume-panel" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">{{ 'resume.projects.title' | translate }}</h2>
+      @for (project of 'resume.projects.items' | translate; track project.title) {
+        <article>
+          <h3>{{ project.title }} — {{ project.year }}</h3>
+          @for (item of project.items; track $index) {
+            <p>{{ item }}</p>
+          }
+        </article>
+      }
+    </section>
 
-        <div class="row text-dark">
-          <div class="col-xl-1 col-12">
-            <span class="">{{ 'resume.experience.code_builders.duration' | translate }}</span>
-          </div>
-          <div class="col content3">
-            <ul>
-              <li
-                [innerHTML]="'resume.experience.code_builders.description.item1' | translate"
-              ></li>
-              <li
-                [innerHTML]="'resume.experience.code_builders.description.item2' | translate"
-              ></li>
-              <li
-                [innerHTML]="'resume.experience.code_builders.description.item3' | translate"
-              ></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row fw-bold pt-4">
-          <div class="col title3">
-            <div class="">
-              {{ 'resume.experience.polyhedron_universe.title' | translate }}
-              <span class="text-dark"
-                >&mdash; {{ 'resume.experience.polyhedron_universe.position' | translate }}</span
-              >
-            </div>
-          </div>
-        </div>
-
-        <div class="row text-dark">
-          <div class="col-xl-1 col-12">
-            <span class="">{{
-              'resume.experience.polyhedron_universe.duration' | translate
-            }}</span>
-          </div>
-          <div class="col content3">
-            <ul>
-              <li
-                [innerHTML]="'resume.experience.polyhedron_universe.description.item1' | translate"
-              ></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row fw-bold pt-4">
-          <div class="col title3">
-            <div class="">
-              {{ 'resume.experience.dvrv.title' | translate }}
-              <span class="text-dark"
-                >&mdash; {{ 'resume.experience.dvrv.position' | translate }}</span
-              >
-            </div>
-          </div>
-        </div>
-
-        <div class="row text-dark">
-          <div class="col-xl-1 col-12">
-            <span class="">{{ 'resume.experience.dvrv.duration' | translate }}</span>
-          </div>
-          <div class="col content3">
-            <ul>
-              <li [innerHTML]="'resume.experience.dvrv.description.item1' | translate"></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row fw-bold pt-4">
-          <div class="col title3">
-            <div class="">
-              {{ 'resume.experience.othala.title' | translate }}
-              <span class="text-dark"
-                >&mdash; {{ 'resume.experience.othala.position' | translate }}</span
-              >
-            </div>
-          </div>
-        </div>
-
-        <div class="row text-dark">
-          <div class="col-xl-1 col-12">
-            <span class="">{{ 'resume.experience.othala.duration' | translate }}</span>
-          </div>
-          <div class="col content3">
-            <p [innerHTML]="'resume.experience.othala.description.item1' | translate"></p>
-            <ul>
-              <li [innerHTML]="'resume.experience.othala.description.sub.item1' | translate"></li>
-              <li [innerHTML]="'resume.experience.othala.description.sub.item2' | translate"></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row fw-bold pt-4">
-          <div class="col title3">
-            <div class="">
-              {{ 'resume.experience.hera.title' | translate }}
-              <span class="text-dark"
-                >&mdash; {{ 'resume.experience.hera.position' | translate }}</span
-              >
-            </div>
-          </div>
-        </div>
-
-        <div class="row text-dark">
-          <div class="col-xl-1 col-12">
-            <span class="">{{ 'resume.experience.hera.duration' | translate }}</span>
-          </div>
-          <div class="col content3">
-            <ul>
-              <li [innerHTML]="'resume.experience.hera.description.item1' | translate"></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- HOBBIES -->
-    <div class="row mb-1">
-      <div class="col p-3">
-        <div class="row  fw-bold pb-3">
-          <div class="col title3">
-            <span [innerHTML]="'resume.hobbies.title' | translate"></span>
-          </div>
-        </div>
-        <div class="row text-dark">
-          <div class="col content3">
-            <p [innerHTML]="'resume.hobbies.content' | translate"></p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <section class="resume-panel" aria-labelledby="languages-heading">
+      <h2 id="languages-heading">{{ 'resume.languages.title' | translate }}</h2>
+      <ul>
+        <li [innerHTML]="'resume.languages.english' | translate"></li>
+        <li [innerHTML]="'resume.languages.spanish' | translate"></li>
+        <li [innerHTML]="'resume.languages.german' | translate"></li>
+      </ul>
+      <h2>{{ 'resume.hobbies.title' | translate }}</h2>
+      <p>{{ 'resume.hobbies.content' | translate }}</p>
+    </section>
   </div>
-</div>
+</main>

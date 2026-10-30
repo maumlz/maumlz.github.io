@@ -1,24 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
-import { HeaderScene } from '../../components/threejs/header-scene/header-scene';
 
 @Component({
   selector: 'app-resume',
-  imports: [TranslatePipe, HeaderScene],
+  imports: [TranslatePipe],
   templateUrl: './resume.html',
   styleUrl: './resume.css',
-  standalone: true
+  standalone: true,
 })
-export class Resume implements OnInit {
-
-  public text: string; 
-
-  constructor() {
-    this.text = 'Hello, world!';
-   }
-
-  ngOnInit(): void {
-
-  }
-
+export class Resume {
+  // Most recent end date first; tied end dates use the most recent start date.
+  readonly experienceKeys = ['banregio', 'code_builders', 'dvrv', 'polyhedron_universe'];
 }
