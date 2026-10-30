@@ -1,6 +1,16 @@
 <div [ngClass]="{ 'main-menu': this.route === '' }">
-  <nav [ngClass]="{ 'flex-column': this.route === ''}" class="navbar navbar-expand d-flex justify-content-between px-3">
-    <ul [ngClass]="{ 'navbar-nav': this.route !== '', 'flex-column': this.route === '' }" class="nav">
+  <nav
+    aria-label="Main navigation"
+    [ngClass]="{ 'flex-column': this.route === '' }"
+    class="navbar navbar-expand d-flex justify-content-between px-3"
+  >
+    @if (route === '') {
+      <h1 class="menu-title">Mauricio Meléndez</h1>
+    }
+    <ul
+      [ngClass]="{ 'navbar-nav': this.route !== '', 'flex-column': this.route === '' }"
+      class="nav"
+    >
       <li class="nav-item">
         <a
           class="nav-link p-3"

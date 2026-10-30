@@ -1,0 +1,10 @@
+:host {
+  display: block;
+}
+app-main-scene {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: #030a17;
+}
