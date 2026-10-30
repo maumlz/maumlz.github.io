@@ -32,7 +32,6 @@ export class BaseScene {
         1000,
       );
       this.camera.position.z = 5;
-      console.log(canvas.parentElement)
       // 3. Setup the Renderer
       this.renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true });
       //this.renderer.setSize(canvas.parentElement?.clientWidth ?? 0, canvas.parentElement?.clientHeight?? 0);
