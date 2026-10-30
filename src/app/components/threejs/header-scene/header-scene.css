@@ -1,5 +1,11 @@
-canvas {
-    border-radius: 25px;
+:host {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 
-    width: 100%;
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
 }

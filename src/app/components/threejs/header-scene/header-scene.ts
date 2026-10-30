@@ -8,24 +8,35 @@ import { BaseScene } from '../base-scene/base-scene';
   templateUrl: './header-scene.html',
   styleUrl: './header-scene.css',
 })
-export class HeaderScene extends BaseScene implements AfterViewInit, OnDestroy{
-
+export class HeaderScene extends BaseScene implements AfterViewInit, OnDestroy {
   private cube!: THREE.Mesh;
   private animationFrameId!: number;
+  private resizeObserver?: ResizeObserver;
 
   constructor(private ngZone: NgZone) {
     super();
   }
 
   ngAfterViewInit(): void {
-    this.initThree();
+    // The header content remains usable when WebGL is unavailable.
+    try {
+      this.initThree();
+    } catch {
+      return;
+    }
 
-    if(this.renderer){
+    if (this.renderer) {
+      this.scene.background = new THREE.Color('#000');
       this.createCube();
-      
+
       // Run the animation loop outside Angular Zone to prevent heavy change detection cycles
       this.ngZone.runOutsideAngular(() => {
-        this.animate();
+        this.resize();
+        this.resizeObserver = new ResizeObserver(this.resize);
+        this.resizeObserver.observe(this.renderer.domElement);
+        if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          this.animate();
+        }
       });
     }
   }
@@ -35,15 +46,31 @@ export class HeaderScene extends BaseScene implements AfterViewInit, OnDestroy{
     if (this.animationFrameId) {
       cancelAnimationFrame(this.animationFrameId);
     }
-    if(this.renderer){
+    this.resizeObserver?.disconnect();
+    this.cube?.geometry.dispose();
+    if (this.cube?.material instanceof THREE.Material) {
+      this.cube.material.dispose();
+    }
+    if (this.renderer) {
       this.renderer.dispose();
     }
   }
 
+  private resize = (): void => {
+    const canvas = this.renderer.domElement;
+    const width = canvas.clientWidth;
+    const height = canvas.clientHeight;
+    if (!width || !height) return;
+    this.renderer.setSize(width, height, false);
+    this.camera.aspect = width / height;
+    this.camera.updateProjectionMatrix();
+    this.renderer.render(this.scene, this.camera);
+  };
+
   private createCube(): void {
     // 4. Add an Object (Geometry + Material = Mesh)
     const geometry = new THREE.BoxGeometry(1, 1, 1);
-    const material = new THREE.MeshBasicMaterial({ color: 0x00ffcc, wireframe: true });
+    const material = new THREE.MeshBasicMaterial({ color: 0x09627b, wireframe: true });
     this.cube = new THREE.Mesh(geometry, material);
     this.scene.add(this.cube);
   }
@@ -56,9 +83,8 @@ export class HeaderScene extends BaseScene implements AfterViewInit, OnDestroy{
     this.cube.rotation.y += 0.01;
 
     // Render the scene
-    if(this.renderer){ 
+    if (this.renderer) {
       this.renderer.render(this.scene, this.camera);
     }
   };
-
 }

@@ -1,25 +1,28 @@
 <main class="resume">
   <div class="container py-4">
     <header class="profile resume-panel">
-      <img src="assets/me.jpg" alt="Mauricio Meléndez" width="128" height="128" />
-      <h1>Mauricio Meléndez</h1>
-      <p class="professional-title">{{ 'resume.professional_title' | translate }}</p>
-      <address>
-        <a href="mailto:mauricio_esteban@live.com">mauricio_esteban@live.com</a>
-        <a href="https://maumlz.github.io">maumlz.github.io</a>
-        <a href="tel:+528111813408">+528111813408</a>
-      </address>
-      <div class="noprint download">
-        <a
-          href="../../assets/docs/CV - Mauricio Meléndez (EN).pdf"
-          download
-          aria-disabled="true"
-          (click)="$event.preventDefault()"
-          aria-describedby="pdf-notice"
-        >
-          {{ 'resume.download' | translate }}
-        </a>
-        <p id="pdf-notice">{{ 'resume.pdf_notice' | translate }}</p>
+      <app-header-scene aria-hidden="true" />
+      <div class="profile-content">
+        <img src="assets/me.jpg" alt="Mauricio Meléndez" width="128" height="128" />
+        <h1>Mauricio Meléndez</h1>
+        <p class="professional-title">{{ 'resume.professional_title' | translate }}</p>
+        <address>
+          <a href="mailto:mauricio_esteban@live.com">mauricio_esteban@live.com</a>
+          <a href="https://maumlz.github.io">maumlz.github.io</a>
+          <a href="tel:+528111813408">+528111813408</a>
+        </address>
+        <div class="noprint download">
+          <a
+            href="../../assets/docs/CV - Mauricio Meléndez (EN).pdf"
+            download
+            aria-disabled="true"
+            (click)="$event.preventDefault()"
+            aria-describedby="pdf-notice"
+          >
+            {{ 'resume.download' | translate }}
+          </a>
+          <p id="pdf-notice">{{ 'resume.pdf_notice' | translate }}</p>
+        </div>
       </div>
     </header>
 
