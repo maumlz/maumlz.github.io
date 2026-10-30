@@ -19,12 +19,15 @@ export class HeaderScene extends BaseScene implements AfterViewInit, OnDestroy{
 
   ngAfterViewInit(): void {
     this.initThree();
-    this.createCube();
-    
-    // Run the animation loop outside Angular Zone to prevent heavy change detection cycles
-    this.ngZone.runOutsideAngular(() => {
-      this.animate();
-    });
+
+    if(this.renderer){
+      this.createCube();
+      
+      // Run the animation loop outside Angular Zone to prevent heavy change detection cycles
+      this.ngZone.runOutsideAngular(() => {
+        this.animate();
+      });
+    }
   }
 
   ngOnDestroy(): void {
@@ -32,7 +35,9 @@ export class HeaderScene extends BaseScene implements AfterViewInit, OnDestroy{
     if (this.animationFrameId) {
       cancelAnimationFrame(this.animationFrameId);
     }
-    this.renderer.dispose();
+    if(this.renderer){
+      this.renderer.dispose();
+    }
   }
 
   private createCube(): void {
@@ -51,7 +56,9 @@ export class HeaderScene extends BaseScene implements AfterViewInit, OnDestroy{
     this.cube.rotation.y += 0.01;
 
     // Render the scene
-    this.renderer.render(this.scene, this.camera);
+    if(this.renderer){ 
+      this.renderer.render(this.scene, this.camera);
+    }
   };
 
 }

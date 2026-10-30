@@ -72,6 +72,10 @@
     box-sizing: border-box;
   }
 
+  .app-navbar{
+    display: none;
+  }
+
   .resume {
     padding: 0.5cm 0.5cm;
   }

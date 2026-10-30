@@ -31,6 +31,8 @@ export class MainScene extends BaseScene implements AfterViewInit, OnDestroy {
     this.animationFrameId = requestAnimationFrame(this.animate);
 
     // Render the scene
-    this.renderer.render(this.scene, this.camera);
+    if(this.renderer){
+      this.renderer.render(this.scene, this.camera);
+    }
   };
 }
