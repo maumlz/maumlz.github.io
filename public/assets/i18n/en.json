@@ -121,6 +121,22 @@
       ]
     },
     "download": "Download Resume",
-    "pdf_notice": "The downloadable PDF is currently unavailable. Use your browser’s Print / Save as PDF option for this updated resume."
+    "pdf_notice": "The downloadable PDF is currently unavailable. Use your browser’s Print / Save as PDF option for this updated resume.",
+    "model_credit": {
+      "label": "3D model source:",
+      "changes": "Adapted for web display with scaling, animation, materials, and landscape texture mapping.",
+      "by": "by"
+    }
+  },
+  "site": {
+    "credits": "Credits & licenses",
+    "ai_assistance": "Built with AI assistance"
+  },
+  "about": {
+    "title": "About this website",
+    "intro": "Personal portfolio and resume of Mauricio Meléndez.",
+    "model": "Header 3D model",
+    "ai_title": "AI assistance",
+    "ai_description": "AI tools assisted with the development of this website, including code, styling, and content editing."
   }
 }

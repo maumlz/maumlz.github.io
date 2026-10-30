@@ -1,1 +1,28 @@
-<p>about works!</p>
+<main class="about-page">
+  <div class="about-content">
+    <h1>{{ 'about.title' | translate }}</h1>
+    <p>{{ 'about.intro' | translate }}</p>
+
+    <section aria-labelledby="credits-heading">
+      <h2 id="credits-heading">{{ 'site.credits' | translate }}</h2>
+      <h3>{{ 'about.model' | translate }}</h3>
+      <p>
+        <a href="https://www.thingiverse.com/thing:4237122">Halo Installation 04</a>
+        {{ 'resume.model_credit.by' | translate }}
+        <a href="https://www.thingiverse.com/spartanx360/designs">spartanx360</a>
+        — <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>.
+      </p>
+      <p>
+        {{ 'resume.model_credit.label' | translate }}
+        <a href="https://www.printables.com/model/398865-halo-installation-04">Printables</a>
+        · <a href="https://www.thingiverse.com/thing:4237122">Thingiverse</a>.
+      </p>
+      <p>{{ 'resume.model_credit.changes' | translate }}</p>
+    </section>
+
+    <section aria-labelledby="ai-heading">
+      <h2 id="ai-heading">{{ 'about.ai_title' | translate }}</h2>
+      <p>{{ 'about.ai_description' | translate }}</p>
+    </section>
+  </div>
+</main>

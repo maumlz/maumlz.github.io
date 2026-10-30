@@ -121,6 +121,22 @@
       ]
     },
     "download": "Descargar currículum",
-    "pdf_notice": "El PDF descargable no está disponible actualmente. Utiliza la opción Imprimir / Guardar como PDF de tu navegador para obtener este currículum actualizado."
+    "pdf_notice": "El PDF descargable no está disponible actualmente. Utiliza la opción Imprimir / Guardar como PDF de tu navegador para obtener este currículum actualizado.",
+    "model_credit": {
+      "label": "Fuente del modelo 3D:",
+      "changes": "Adaptado para la web con escala, animación, materiales y mapeo de textura del paisaje.",
+      "by": "por"
+    }
+  },
+  "site": {
+    "credits": "Créditos y licencias",
+    "ai_assistance": "Creado con ayuda de IA"
+  },
+  "about": {
+    "title": "Acerca de este sitio",
+    "intro": "Portafolio personal y currículum de Mauricio Meléndez.",
+    "model": "Modelo 3D del encabezado",
+    "ai_title": "Ayuda de IA",
+    "ai_description": "Se utilizaron herramientas de IA como apoyo en el desarrollo de este sitio, incluyendo código, estilos y edición de contenido."
   }
 }

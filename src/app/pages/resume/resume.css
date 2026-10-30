@@ -187,3 +187,15 @@ ul:last-child {
     content: none;
   }
 }
+
+.resume-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1.5rem;
+  padding: 1rem;
+  background: var(--secondary-color);
+  color: #52616a;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
