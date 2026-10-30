@@ -1,99 +1,126 @@
 {
-    "resume": {
-        "professional_summary": {
-            "title": "Professional Summary",
-            "content": "Full-Stack Developer with experience in Angular and Spring Boot projects, seeking to contribute to scalable web applications and continue growing in software engineering, web development, and database management."
+  "resume": {
+    "professional_summary": {
+      "title": "Professional Summary",
+      "content": "Software Engineer with nearly five years of professional experience designing, developing, and maintaining enterprise banking applications using Java, Spring Boot, Angular, and PostgreSQL.",
+      "details": "Experienced in microservices development, system integration, unit testing, application monitoring, and production troubleshooting. Familiar with software delivery workflows using GitHub, OpenShift, and Jira Cloud."
+    },
+    "education": {
+      "title": "Education",
+      "content1": "Bachelor's Degree in Applied Mathematics and Computing",
+      "content2": "Diploma in Statistical Techniques and Data Mining",
+      "college": "Universidad Nacional Autónoma de México (UNAM) — Facultad de Estudios Superiores Acatlán"
+    },
+    "skills": {
+      "title": "Technical Skills",
+      "groups": [
+        {
+          "title": "Programming Languages",
+          "items": "Java, TypeScript, JavaScript, SQL, C#, PHP, C, C++"
         },
-        "knowledge": {
-            "title": "Knowledge",
-            "content": "Continuous development and integration of microservices and web applications using tools like GitHub, Jira Cloud and OpenShift."
+        {
+          "title": "Backend Development",
+          "items": "Spring Boot, JPA, Hibernate, ASP.NET MVC, Microservices"
         },
-        "education": {
-            "title": "Education",
-            "content1": "Bachelor's Degree in Applied Mathematics and Computing",
-            "content2": "Diploma in Statistical Techniques and Data Mining",
-            "college": "<em> — Facultad de Estudios Superiores Acatlán, </em> UNAM."
+        {
+          "title": "Frontend Development",
+          "items": "Angular, React.js, HTML, CSS, Bootstrap, Three.js"
         },
-        "skills": {
-            "title": "Skills",
-            "languages":"<b>Languages</b>: Java, TypeScript, JavaScript, C#, PHP, SQL, C, C++",
-            "front-end":"<b>Front-End</b>: Angular, React.js, HTML, CSS, Bootstrap, Three.js",
-            "back-end":"<b>Back-end</b>: Spring Boot, ASP.NET MVC, JPA, Hibernate",
-            "databases":"<b>Databases</b>: PostgreSQL, MySQL, MongoDB, Sybase",
-            "tools-platforms":"<b>Tools & Platforms</b>: GitHub, OpenShift, Heroku, SonarQube, JUnit, Mockito, Unity, XAMPP"
+        {
+          "title": "Databases",
+          "items": "PostgreSQL, MySQL, MongoDB, Sybase"
         },
-        "languages": {
-          "title": "Languages",
-          "english": "<b>English</b>: Advanced",
-          "spanish": "<b>Spanish</b>: Native",
-          "german": "<b>German</b>: Basic"
+        {
+          "title": "Testing and Code Quality",
+          "items": "JUnit, Jest, Mockito, SonarQube"
         },
-        "experience": {
-            "title": "Experience",
-            "banregio": {
-                "title": "Banregio",
-                "position": "Senior Analyst Programmer",
-                "duration": "Dec 2021 - Now",
-                "description": {
-                    "item1": "Implemented microservices using <b>Spring Boot</b>, <b>Hibernate</b>, <b>JPA</b>, and <b>PostgreSQL</b> for different onboarding processes such as the purchase of new products offered by the bank, including bank accounts, credit cards, and personal or business insurance.",
-                    "item2": "Took over the <b>biometric application</b>, managing the front-end and back-end of the component, including the integration of new biometric authentication flows with <b>Incode</b>.",
-                    "item3": "Integrated the <b>Application Performance Monitoring</b> system provided by <b>Elastic</b> into various <b>Angular</b> projects for improved monitoring of the application.",
-                    "item4": "Created components and pages for new products, as well as managed and optimized existing ones.",
-                    "item5": "With the help of <b>GitHub Copilot</b>, developed unit tests using <b>Jest</b> and <b>JUnit</b>.",
-                    "item6": "Provided incident support involving analysis, root cause reporting, and solution development when required using <b>Jira Cloud</b>.",
-                    "item7": "Continuous development and integration workflows using tools such as <b>Jira Cloud</b>, <b>OpenShift</b>, and <b>GitHub</b>."
-                }
-            },
-            "code_builders": {
-                "title": "Code Builders",
-                "position": "Full-Stack Developer",
-                "duration": "June 2021 - Dec 2021",
-                "description": {
-                    "item1": "Participated in the migration of a towing and vehicle repair management system using ASP.NET MVC and C#.",
-                    "item2": "Developed front-end views and interfaces using Bootstrap and JavaScript.",
-                    "item3": "Contributed to back-end development by migrating legacy system functionality and implementing client-requested improvements."
-                }
-            },
-            "polyhedron_universe": {
-                "title": "Polyhedron Universe",
-                "position": "Programmer",
-                "duration": "Aug 2020 - Apr 2021",
-                "description": {
-                    "item1": "Freelance multimedia web project focused on creative experimentation and 3D graphics development. I was part of the 3D graphics environment development team, which was built using the Three.js library and the React.js framework."
-                }
-            },
-            "dvrv": {
-                "title": "Visualization and Virtual Reality Department",
-                "position": "Programmer",
-                "duration": "Oct 2020 - Apr 2021",
-                "description": {
-                    "item1": "During my time at DVRV, I took part in different tasks related to <em>Augmented Reality</em> and <em>Virtual Reality</em>. These tasks involved testing augmented reality solutions and developing a mini tutorial for the Oculus Quest VR headset using Unity."
-                }
-            },
-            "othala": {
-                "title": "Othala",
-                "position": "Programmer",
-                "duration": "Jan 2019 - Sep 2020",
-                "description": {
-                    "item1": "A personal project that, along with friends and classmates, was aimed at video game development using the <b>Unity</b> engine. During this time, we completed two projects:",
-                    "sub": {
-                        "item1": "<b> Caro: </b> <br>A game developed for a contest at our university in which we won first place. A PC game featuring four mini-games and a short but narrative-driven story.",
-                        "item2":"<b> Save the Aliens: </b> <br> Developed during a seminar at the Center of Digital Culture (CCD) in Mexico City. <br>Aimed at mobile devices. A skill-based mobile game in which players rescue aliens while attempting to beat their high scores."
-                    }
-                }
-            },
-            "hera": {
-                "title": "Sistema Hera",
-                "position": "Back-end / Database",
-                "duration": "Aug - Dec 2018",
-                "description": {
-                    "item1": "Developed a web-based management system for a high school. I designed and built the database while also contributing to back-end development using PHP. This was a project developed for the class of Software Engineering; five teams delivered solutions, and, among all the projects, my team's solution was chosen as the best."
-                }
-            }
+        {
+          "title": "Development and Delivery Tools",
+          "items": "GitHub, GitHub Copilot, OpenShift, Jira Cloud, Elastic APM"
         },
-        "hobbies": {
-            "title": "Hobbies",
-            "content": "Interests include reading science fiction and history, listening to music, film photography, and DIY technology projects."
+        {
+          "title": "Additional Tools",
+          "items": "Unity, Heroku, XAMPP"
         }
-    }
+      ]
+    },
+    "languages": {
+      "title": "Languages",
+      "english": "<b>English</b>: Advanced",
+      "spanish": "<b>Spanish</b>: Native",
+      "german": "<b>German</b>: Basic"
+    },
+    "experience": {
+      "title": "Experience",
+      "banregio": {
+        "title": "Banregio",
+        "position": "Senior Analyst Programmer",
+        "duration": "December 2021 – Present",
+        "items": [
+          "Design, develop, and maintain Java and Spring Boot microservices supporting digital onboarding processes for banking products, including accounts, credit cards, and insurance.",
+          "Design and implement backend application components using Hibernate, JPA, and PostgreSQL, considering integration requirements and dependencies across application components.",
+          "Maintain and enhance a biometric authentication application, contributing to both frontend and backend development and integrating new authentication workflows using Incode.",
+          "Integrate Elastic Application Performance Monitoring (APM) into Angular applications to support application observability and production monitoring.",
+          "Develop and maintain Angular components and pages, implementing new functionality and optimizing existing application features.",
+          "Regularly develop unit tests using JUnit and Jest, applying mocking techniques to isolate dependencies and validate application behavior.",
+          "Leverage GitHub Copilot to assist with code development, test generation, and development workflows.",
+          "Investigate production incidents, perform root cause analysis, document findings, and implement corrective solutions.",
+          "Execute and monitor application deployments using OpenShift, collaborating with development and quality assurance teams.",
+          "Participate in software development and delivery workflows using GitHub, Jira Cloud, and OpenShift."
+        ]
+      },
+      "code_builders": {
+        "title": "Code Builders",
+        "position": "Programmer",
+        "duration": "June 2021 – December 2021",
+        "items": [
+          "Participated in migrating a legacy towing and vehicle repair management system to ASP.NET MVC using C#.",
+          "Developed frontend interfaces using Bootstrap and JavaScript.",
+          "Migrated backend functionality and implemented client-requested improvements."
+        ]
+      },
+      "polyhedron_universe": {
+        "title": "Polyhedron Universe",
+        "position": "Programmer",
+        "duration": "August 2020 – April 2021",
+        "items": [
+          "Collaborated on a web-based multimedia platform, developing interactive 3D graphics environments using Three.js and React.js."
+        ]
+      },
+      "dvrv": {
+        "title": "DVRV — Visualization and Virtual Reality Department",
+        "position": "Programmer",
+        "duration": "October 2020 – April 2021",
+        "items": [
+          "Evaluated augmented reality solutions and developed an interactive VR tutorial for Oculus Quest using Unity."
+        ]
+      }
+    },
+    "hobbies": {
+      "title": "Hobbies",
+      "content": "Interests include reading science fiction and history, listening to music, film photography, and DIY technology projects."
+    },
+    "professional_title": "Software Engineer | Java | Spring Boot | Angular",
+    "projects": {
+      "title": "Selected Projects",
+      "items": [
+        {
+          "title": "Othala",
+          "year": "2019",
+          "items": [
+            "Collaborated on two Unity-based games: Caro, first-place winner in a university competition, and Save the Aliens, a mobile game developed during a seminar at Centro de Cultura Digital."
+          ]
+        },
+        {
+          "title": "Sistema Hera",
+          "year": "2018",
+          "items": [
+            "Designed and developed a web-based high school grading management system using PHP. The project was selected as the best solution among five student teams."
+          ]
+        }
+      ]
+    },
+    "download": "Download Resume",
+    "pdf_notice": "The downloadable PDF is currently unavailable. Use your browser’s Print / Save as PDF option for this updated resume."
+  }
 }
