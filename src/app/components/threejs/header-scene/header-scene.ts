@@ -22,7 +22,8 @@ export class HeaderScene extends BaseScene implements AfterViewInit, OnDestroy {
   private landscapeTexture?: THREE.Texture;
   private destroyed = false;
   private ring?: THREE.Mesh;
-  private animationFrameId!: number;
+  private animationFrameId?: number;
+  private previousFrameTime?: number;
   private resizeObserver?: ResizeObserver;
 
   constructor(private ngZone: NgZone) {
@@ -45,24 +46,19 @@ export class HeaderScene extends BaseScene implements AfterViewInit, OnDestroy {
       void this.loadLandscapeTexture();
       void this.loadStl(this.stlUrl);
 
-      // Run the animation loop outside Angular Zone to prevent heavy change detection cycles
+      // Handle responsive rendering outside Angular change detection.
       this.ngZone.runOutsideAngular(() => {
         this.resize();
         this.resizeObserver = new ResizeObserver(this.resize);
         this.resizeObserver.observe(this.renderer.domElement);
-        if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-          this.animate();
-        }
       });
     }
   }
 
   ngOnDestroy(): void {
     this.destroyed = true;
-    // Clean up animation frame loop and dispose renderer elements to prevent memory leaks
-    if (this.animationFrameId) {
-      cancelAnimationFrame(this.animationFrameId);
-    }
+    if (this.animationFrameId !== undefined) cancelAnimationFrame(this.animationFrameId);
+    // Dispose scene resources and disconnect resize handling.
     this.resizeObserver?.disconnect();
     this.ringLights?.dispose();
     this.disposeRing();
@@ -106,14 +102,19 @@ export class HeaderScene extends BaseScene implements AfterViewInit, OnDestroy {
         model.dispose();
         return;
       }
-      // Initial orientation also applies when reduced motion disables animation.
-      model.rotation.set(0.65, 0.4, 0.15);
+      // Reset all angles before starting the Y-axis rotation.
+      model.rotation.set(-0.75, 1, 0);
       this.ring = model;
       if (this.landscapeTexture) applyRingTexture(model, this.landscapeTexture);
       this.ringLights = new RingLights(model.geometry);
       model.add(this.ringLights);
       this.scene.add(model);
-      // Render immediately even when reduced motion disables the animation loop.
+      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        this.ngZone.runOutsideAngular(() => {
+          this.animationFrameId = requestAnimationFrame(this.animate);
+        });
+      }
+      // Render once even when reduced motion is enabled.
       this.renderer.render(this.scene, this.camera);
     } catch (error) {
       if (!this.destroyed) console.warn('Could not load STL model.', error);
@@ -132,19 +133,17 @@ export class HeaderScene extends BaseScene implements AfterViewInit, OnDestroy {
     this.renderer.render(this.scene, this.camera);
   };
 
-  private animate = (): void => {
+  private animate = (time: number): void => {
+    if (this.destroyed) return;
+    const delta =
+      this.previousFrameTime === undefined
+        ? 0
+        : Math.min((time - this.previousFrameTime) / 1000, 0.05);
+    this.previousFrameTime = time;
+    // 0.15 radians per second matches the previous slow speed at 60 fps.
+    if (this.ring) this.ring.rotation.z += 0.15 * delta;
+    this.renderer.render(this.scene, this.camera);
     this.animationFrameId = requestAnimationFrame(this.animate);
-
-    // Rotate the ring to reveal its broad inner surface and thin outer shell
-    if (this.ring) {
-      this.ring.rotation.x += 0.0025;
-      this.ring.rotation.y += 0.0025;
-    }
-
-    // Render the scene
-    if (this.renderer) {
-      this.renderer.render(this.scene, this.camera);
-    }
   };
 
   private createLights(): void {
