@@ -1,6 +1,9 @@
 import { AfterViewInit, Component, NgZone, OnDestroy } from '@angular/core';
 import * as THREE from 'three';
 import { BaseScene } from '../base-scene/base-scene';
+import { RingLights } from '../models/ring-lights';
+import { Eclipse } from '../models/eclipse';
+import { Starfield } from '../models/starfield';
 import { StlModel } from '../models/stl-model';
 import { applyRingTexture } from '../models/ring-texture';
 
@@ -13,6 +16,9 @@ import { applyRingTexture } from '../models/ring-texture';
 export class HeaderScene extends BaseScene implements AfterViewInit, OnDestroy {
   // Model files are served from public/assets/models.
   private readonly stlUrl = 'assets/models/installation_04_full_ring.stl';
+  private ringLights?: RingLights;
+  private eclipse?: Eclipse;
+  private starfield?: Starfield;
   private landscapeTexture?: THREE.Texture;
   private destroyed = false;
   private ring?: THREE.Mesh;
@@ -32,7 +38,9 @@ export class HeaderScene extends BaseScene implements AfterViewInit, OnDestroy {
     }
 
     if (this.renderer) {
-      this.scene.background = new THREE.Color('#000');
+      this.scene.background = new THREE.Color('#020610');
+      this.starfield = new Starfield();
+      this.scene.add(this.starfield);
       this.createLights();
       void this.loadLandscapeTexture();
       void this.loadStl(this.stlUrl);
@@ -56,7 +64,10 @@ export class HeaderScene extends BaseScene implements AfterViewInit, OnDestroy {
       cancelAnimationFrame(this.animationFrameId);
     }
     this.resizeObserver?.disconnect();
+    this.ringLights?.dispose();
     this.disposeRing();
+    this.starfield?.dispose();
+    this.eclipse?.dispose();
     this.landscapeTexture?.dispose();
     if (this.renderer) {
       this.renderer.dispose();
@@ -99,6 +110,8 @@ export class HeaderScene extends BaseScene implements AfterViewInit, OnDestroy {
       model.rotation.set(0.65, 0.4, 0.15);
       this.ring = model;
       if (this.landscapeTexture) applyRingTexture(model, this.landscapeTexture);
+      this.ringLights = new RingLights(model.geometry);
+      model.add(this.ringLights);
       this.scene.add(model);
       // Render immediately even when reduced motion disables the animation loop.
       this.renderer.render(this.scene, this.camera);
@@ -115,6 +128,7 @@ export class HeaderScene extends BaseScene implements AfterViewInit, OnDestroy {
     this.renderer.setSize(width, height, false);
     this.camera.aspect = width / height;
     this.camera.updateProjectionMatrix();
+    this.eclipse?.resize(this.camera);
     this.renderer.render(this.scene, this.camera);
   };
 
@@ -123,8 +137,8 @@ export class HeaderScene extends BaseScene implements AfterViewInit, OnDestroy {
 
     // Rotate the ring to reveal its broad inner surface and thin outer shell
     if (this.ring) {
-      this.ring.rotation.x += 0.01;
-      this.ring.rotation.y += 0.01;
+      this.ring.rotation.x += 0.0025;
+      this.ring.rotation.y += 0.0025;
     }
 
     // Render the scene
@@ -134,11 +148,8 @@ export class HeaderScene extends BaseScene implements AfterViewInit, OnDestroy {
   };
 
   private createLights(): void {
-    const ambientLight = new THREE.HemisphereLight(0xdcefff, 0x182330, 1.2);
-    const keyLight = new THREE.DirectionalLight(0xffffff, 3);
-    keyLight.position.set(3, 4, 5);
-    const rimLight = new THREE.DirectionalLight(0x65cfff, 2);
-    rimLight.position.set(-3, 1, -2);
-    this.scene.add(ambientLight, keyLight, rimLight);
+    const ambientLight = new THREE.HemisphereLight(0xdcefff, 0x182330, 0.44);
+    this.eclipse = new Eclipse();
+    this.scene.add(ambientLight, this.eclipse);
   }
 }
