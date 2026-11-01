@@ -138,5 +138,10 @@
     "model": "Modelo 3D del encabezado",
     "ai_title": "Ayuda de IA",
     "ai_description": "Se utilizaron herramientas de IA como apoyo en el desarrollo de este sitio, incluyendo código, estilos y edición de contenido."
+  },
+  "scene_status": {
+    "loading": "Cargando escena 3D…",
+    "ready": "Escena 3D lista",
+    "fallback": "La escena 3D completa no está disponible. Se muestra un fondo simplificado."
   }
 }

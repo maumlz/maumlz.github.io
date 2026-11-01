@@ -138,5 +138,10 @@
     "model": "Header 3D model",
     "ai_title": "AI assistance",
     "ai_description": "AI tools assisted with the development of this website, including code, styling, and content editing."
+  },
+  "scene_status": {
+    "loading": "Loading 3D scene…",
+    "ready": "3D scene ready",
+    "fallback": "Full 3D scene unavailable. Showing a simplified background."
   }
 }
