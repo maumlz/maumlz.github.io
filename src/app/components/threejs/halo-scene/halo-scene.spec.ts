@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HeaderScene } from './header-scene';
+import { HeaderScene } from './halo-scene';
 
 describe('HeaderScene', () => {
   let component: HeaderScene;

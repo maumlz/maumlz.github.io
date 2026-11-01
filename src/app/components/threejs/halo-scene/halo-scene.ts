@@ -8,12 +8,12 @@ import { StlModel } from '../models/stl-model';
 import { applyRingTexture } from '../models/ring-texture';
 
 @Component({
-  selector: 'app-header-scene',
+  selector: 'app-halo-scene',
   imports: [],
-  templateUrl: './header-scene.html',
-  styleUrl: './header-scene.css',
+  templateUrl: './halo-scene.html',
+  styleUrl: './halo-scene.css',
 })
-export class HeaderScene extends BaseScene implements AfterViewInit, OnDestroy {
+export class HaloScene extends BaseScene implements AfterViewInit, OnDestroy {
   // Model files are served from public/assets/models.
   private readonly stlUrl = 'assets/models/installation_04_full_ring.stl';
   private ringLights?: RingLights;
