@@ -64,7 +64,7 @@
           "Develop and maintain Angular components and pages, implementing new functionality and optimizing existing application features.",
           "Regularly develop unit tests using JUnit and Jest, applying mocking techniques to isolate dependencies and validate application behavior.",
           "Leverage GitHub Copilot to assist with code development, test generation, and development workflows.",
-          "Investigate production incidents, perform root cause analysis, document findings, and implement corrective solutions.",
+          "Investigate production incidents and reproduce reported issues in QA environments to support root cause analysis and troubleshooting across multiple banking products and services.",
           "Execute and monitor application deployments using OpenShift, collaborating with development and quality assurance teams.",
           "Participate in software development and delivery workflows using GitHub, Jira Cloud, and OpenShift."
         ]
@@ -126,6 +126,25 @@
       "label": "3D model source:",
       "changes": "Adapted for web display with scaling, animation, materials, and landscape texture mapping.",
       "by": "by"
+    },
+    "professional_skills": {
+      "title": "Professional Skills",
+      "items": [
+        "Analytical Problem-Solving",
+        "Continuous Learning & Technical Curiosity",
+        "Adaptability",
+        "Cross-Functional Collaboration"
+      ]
+    },
+    "ai_learning": {
+      "title": "AI & Machine Learning — Independent Study and Projects",
+      "items": [
+        "Studying machine learning, neural networks, LLMs, Transformer architectures, Retrieval-Augmented Generation (RAG) concepts and architectures, and the mathematical foundations behind modern AI systems through online courses and independent research.",
+        "Implemented a simplified Transformer architecture in Python to understand its internal data flow and core components.",
+        "Currently developing a small GPT-style language model with PyTorch to understand the core components of language model training and text generation.",
+        "Experimented with running the pretrained Qwen2.5 0.5B model locally through Ollama to understand local LLM inference and model execution.",
+        "Researching AI-assisted development and software automation workflows using GitHub Copilot and GitHub Copilot Automations."
+      ]
     }
   },
   "site": {

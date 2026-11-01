@@ -13,5 +13,5 @@ import { HaloScene } from '../../components/threejs/halo-scene/halo-scene';
 export class Resume {
   readonly sceneState = signal<SceneLoadState>('loading');
   // Most recent end date first; tied end dates use the most recent start date.
-  readonly experienceKeys = ['banregio', 'code_builders', 'dvrv', 'polyhedron_universe'];
+  readonly experienceKeys = ['banregio', 'code_builders', 'polyhedron_universe'];
 }

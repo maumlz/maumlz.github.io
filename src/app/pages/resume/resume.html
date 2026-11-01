@@ -61,6 +61,15 @@
       </div>
     </section>
 
+    <section class="resume-panel" aria-labelledby="professional-skills-heading">
+      <h2 id="professional-skills-heading">{{ 'resume.professional_skills.title' | translate }}</h2>
+      <ul>
+        @for (item of 'resume.professional_skills.items' | translate; track $index) {
+          <li>{{ item }}</li>
+        }
+      </ul>
+    </section>
+
     <section class="resume-panel" aria-labelledby="experience-heading">
       <h2 id="experience-heading">{{ 'resume.experience.title' | translate }}</h2>
       @for (key of experienceKeys; track key) {
@@ -77,6 +86,15 @@
       }
     </section>
 
+    <!-- <section class="resume-panel" aria-labelledby="ai-learning-heading">
+      <h2 id="ai-learning-heading">{{ 'resume.ai_learning.title' | translate }}</h2>
+      <ul>
+        @for (item of 'resume.ai_learning.items' | translate; track $index) {
+          <li>{{ item }}</li>
+        }
+      </ul>
+    </section> -->
+
     <section class="resume-panel" aria-labelledby="education-heading">
       <h2 id="education-heading">{{ 'resume.education.title' | translate }}</h2>
       <p>{{ 'resume.education.college' | translate }}</p>
@@ -86,7 +104,7 @@
       </ul>
     </section>
 
-    <section class="resume-panel" aria-labelledby="projects-heading">
+    <!-- <section class="resume-panel" aria-labelledby="projects-heading">
       <h2 id="projects-heading">{{ 'resume.projects.title' | translate }}</h2>
       @for (project of 'resume.projects.items' | translate; track project.title) {
         <article>
@@ -96,7 +114,7 @@
           }
         </article>
       }
-    </section>
+    </section> -->
 
     <section class="resume-panel" aria-labelledby="languages-heading">
       <h2 id="languages-heading">{{ 'resume.languages.title' | translate }}</h2>
