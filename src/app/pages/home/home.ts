@@ -1,10 +1,10 @@
 import { SceneStatus, type SceneLoadState } from '../../components/scene-status/scene-status';
 import { Component, signal } from '@angular/core';
-import { HaloScene } from '../../components/threejs/halo-scene/halo-scene';
+import { DuneScene } from '../../components/threejs/dune-scene/dune-scene';
 
 @Component({
   selector: 'app-home',
-  imports: [SceneStatus, HaloScene],
+  imports: [SceneStatus, DuneScene],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })

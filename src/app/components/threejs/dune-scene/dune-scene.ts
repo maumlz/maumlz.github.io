@@ -1,8 +1,8 @@
+import { applyPlanetTexture } from '../models/planet-texture';
 import { AfterViewInit, Component, NgZone, OnDestroy } from '@angular/core';
 import * as THREE from 'three';
 import { BaseScene } from '../base-scene/base-scene';
 import { Starfield } from '../models/starfield';
-import { StlModel } from '../models/stl-model';
 import { colorDesertWorld, createDesertMoon } from '../models/desert-world';
 
 @Component({
@@ -12,7 +12,8 @@ import { colorDesertWorld, createDesertMoon } from '../models/desert-world';
   styleUrl: './dune-scene.css',
 })
 export class DuneScene extends BaseScene implements AfterViewInit, OnDestroy {
-  private readonly stlArrakis = 'assets/models/arrakis_1_12_10_7.stl';
+  private planetTexture?: THREE.Texture;
+  private loadFailed = false;
   private starfield?: Starfield;
   private destroyed = false;
   private resizeObserver?: ResizeObserver;
@@ -44,8 +45,8 @@ export class DuneScene extends BaseScene implements AfterViewInit, OnDestroy {
     key.position.set(-5, 5, 7);
     this.scene.add(new THREE.HemisphereLight(0xcbdfff, 0x2b1d13, 0.6), key);
 
-    // Show a lightweight planet immediately, then replace it with the user's STL.
-    const geometry = new THREE.SphereGeometry(2.8, 64, 48);
+    // Create the planet locally; only its surface texture needs downloading.
+    const geometry = new THREE.SphereGeometry(2.8, 64, 48).toNonIndexed();
     colorDesertWorld(geometry);
     this.arrakis = new THREE.Mesh(
       geometry,
@@ -60,31 +61,37 @@ export class DuneScene extends BaseScene implements AfterViewInit, OnDestroy {
       this.resizeObserver = new ResizeObserver(this.resize);
       this.resizeObserver.observe(this.renderer.domElement);
     });
-    void this.loadArrakis();
+    void this.loadPlanetTexture();
   }
 
-  private async loadArrakis(): Promise<void> {
+  private async loadPlanetTexture(): Promise<void> {
     try {
-      const model = await StlModel.load(this.stlArrakis, { size: 5.6 });
+      const texture = await new THREE.TextureLoader().loadAsync(
+        'assets/textures/arrakis_texture.png',
+      );
       if (this.destroyed) {
-        model.dispose();
+        texture.dispose();
         return;
       }
-      colorDesertWorld(model.geometry);
-      model.material.setValues({ color: 0xffffff, vertexColors: true, metalness: 0, roughness: 1 });
-      this.arrakis?.removeFromParent();
-      this.arrakis?.geometry.dispose();
-      this.arrakis?.material.dispose();
-      this.arrakis = model;
-      this.scene.add(model);
-      this.resize();
-      this.loadStateChange.emit('ready');
+      texture.colorSpace = THREE.SRGBColorSpace;
+      texture.wrapS = THREE.RepeatWrapping;
+      texture.anisotropy = Math.min(8, this.renderer.capabilities.getMaxAnisotropy());
+      this.planetTexture = texture;
+      if (this.arrakis) applyPlanetTexture(this.arrakis, texture);
+      this.renderer.render(this.scene, this.camera);
+      this.updateLoadState();
     } catch (error) {
       if (!this.destroyed) {
-        this.loadStateChange.emit('fallback');
-        console.warn('Could not load Arrakis STL; retaining the desert sphere.', error);
+        this.loadFailed = true;
+        this.updateLoadState();
+        console.warn('Could not load Arrakis texture; retaining terrain colors.', error);
       }
     }
+  }
+
+  private updateLoadState(): void {
+    if (this.loadFailed) this.loadStateChange.emit('fallback');
+    else if (this.planetTexture) this.loadStateChange.emit('ready');
   }
 
   private resize = (): void => {
@@ -101,12 +108,6 @@ export class DuneScene extends BaseScene implements AfterViewInit, OnDestroy {
     const portrait = this.camera.aspect < 1;
     const scale = Math.min(1, halfWidth / 3.8);
     this.arrakis?.scale.setScalar(scale);
-    if (this.arrakis instanceof StlModel) {
-      const dimensions = this.arrakis.geometry.boundingBox!.getSize(new THREE.Vector3());
-      this.arrakis.scale.setScalar(
-        (scale * 5.6) / Math.max(dimensions.x, dimensions.y, dimensions.z),
-      );
-    }
     this.arrakis?.position.set(halfWidth * 0.42, -halfHeight * (portrait ? 0.45 : 0.18), -1);
     this.moonOne?.scale.setScalar(scale);
     this.moonTwo?.scale.setScalar(scale);
@@ -120,6 +121,7 @@ export class DuneScene extends BaseScene implements AfterViewInit, OnDestroy {
     this.destroyed = true;
     this.resizeObserver?.disconnect();
     this.starfield?.dispose();
+    this.planetTexture?.dispose();
     for (const mesh of [this.arrakis, this.moonOne, this.moonTwo]) {
       mesh?.geometry.dispose();
       mesh?.material.dispose();
