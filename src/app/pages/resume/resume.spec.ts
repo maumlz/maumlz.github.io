@@ -66,7 +66,7 @@ describe('Resume', () => {
   });
   it('keeps content and the fallback available before the scene loads or if its import fails', async () => {
     const page = fixture.nativeElement as HTMLElement;
-    expect(page.querySelector('app-header-scene')).toBeNull();
+    expect(page.querySelector('app-halo-scene')).toBeNull();
     expect(page.querySelector('.header-fallback')).toBeTruthy();
     expect(page.querySelector('h1')?.textContent).toContain('Mauricio');
     expect(page.querySelector('a[href="mailto:mauricio_esteban@live.com"]')).toBeTruthy();
@@ -77,6 +77,11 @@ describe('Resume', () => {
     await block.render(DeferBlockState.Error);
     expect(page.querySelector('[role="status"]')?.textContent).toContain('simplified background');
     expect(page.querySelector('.header-fallback')).toBeTruthy();
-    expect(page.querySelector('app-header-scene')).toBeNull();
+    expect(page.querySelector('app-halo-scene')).toBeNull();
+  });
+  it('mounts the renamed Halo scene with its positioning class when deferred loading completes', async () => {
+    const [block] = await fixture.getDeferBlocks();
+    await block.render(DeferBlockState.Complete);
+    expect(fixture.nativeElement.querySelector('app-halo-scene.scene-layer')).toBeTruthy();
   });
 });

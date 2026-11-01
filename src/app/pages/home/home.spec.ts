@@ -28,11 +28,16 @@ describe('Home', () => {
   });
   it('keeps content and the fallback available before the scene loads or if its import fails', async () => {
     const page = fixture.nativeElement as HTMLElement;
-    expect(page.querySelector('app-main-scene')).toBeNull();
+    expect(page.querySelector('app-halo-scene')).toBeNull();
     expect(page.querySelector('.home-fallback')).toBeTruthy();
     const [block] = await fixture.getDeferBlocks();
     await block.render(DeferBlockState.Error);
     expect(page.querySelector('.home-fallback')).toBeTruthy();
-    expect(page.querySelector('app-main-scene')).toBeNull();
+    expect(page.querySelector('app-halo-scene')).toBeNull();
+  });
+  it('mounts the renamed Halo scene with its positioning class when deferred loading completes', async () => {
+    const [block] = await fixture.getDeferBlocks();
+    await block.render(DeferBlockState.Complete);
+    expect(fixture.nativeElement.querySelector('app-halo-scene.scene-layer')).toBeTruthy();
   });
 });

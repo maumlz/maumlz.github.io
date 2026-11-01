@@ -149,7 +149,7 @@ ul:last-child {
     box-shadow: none;
     border-radius: 0;
   }
-  .profile app-header-scene,
+  .profile .scene-layer,
   .profile img,
   .download {
     display: none;
@@ -201,7 +201,7 @@ ul:last-child {
 }
 
 .header-fallback,
-.header-backdrop app-header-scene {
+.header-backdrop .scene-layer {
   position: absolute;
   inset: 0;
 }

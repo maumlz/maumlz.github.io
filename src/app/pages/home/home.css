@@ -10,7 +10,7 @@
   overflow: hidden;
 }
 .home-fallback,
-app-main-scene {
+.scene-layer {
   position: absolute;
   inset: 0;
 }

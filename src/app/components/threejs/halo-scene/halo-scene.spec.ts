@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HeaderScene } from './halo-scene';
+import { HaloScene } from './halo-scene';
 
-describe('HeaderScene', () => {
-  let component: HeaderScene;
-  let fixture: ComponentFixture<HeaderScene>;
+describe('HaloScene', () => {
+  let component: HaloScene;
+  let fixture: ComponentFixture<HaloScene>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HeaderScene],
+      imports: [HaloScene],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(HeaderScene);
+    fixture = TestBed.createComponent(HaloScene);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

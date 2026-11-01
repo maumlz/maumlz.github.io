@@ -4,7 +4,7 @@ import { vi } from 'vitest';
 import { BaseScene } from '../base-scene/base-scene';
 import { DuneScene } from './dune-scene';
 
-describe('MainScene', () => {
+describe('DuneScene', () => {
   let component: DuneScene;
   let fixture: ComponentFixture<DuneScene>;
 

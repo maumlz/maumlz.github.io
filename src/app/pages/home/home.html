@@ -1,7 +1,11 @@
 <div class="home-backdrop">
   <div class="home-fallback" aria-hidden="true"></div>
   @defer (on idle) {
-    <app-halo-scene aria-hidden="true" (loadStateChange)="sceneState.set($event)" />
+    <app-halo-scene
+      class="scene-layer"
+      aria-hidden="true"
+      (loadStateChange)="sceneState.set($event)"
+    />
     <app-scene-status [state]="sceneState()" />
   } @placeholder {
     <app-scene-status />
