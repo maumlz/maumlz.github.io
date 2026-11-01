@@ -6,12 +6,12 @@ import { StlModel } from '../models/stl-model';
 import { colorDesertWorld, createDesertMoon } from '../models/desert-world';
 
 @Component({
-  selector: 'app-main-scene',
+  selector: 'app-dune-scene',
   imports: [],
-  templateUrl: './main-scene.html',
-  styleUrl: './main-scene.css',
+  templateUrl: './dune-scene.html',
+  styleUrl: './dune-scene.css',
 })
-export class MainScene extends BaseScene implements AfterViewInit, OnDestroy {
+export class DuneScene extends BaseScene implements AfterViewInit, OnDestroy {
   private readonly stlArrakis = 'assets/models/arrakis_1_12_10_7.stl';
   private starfield?: Starfield;
   private destroyed = false;

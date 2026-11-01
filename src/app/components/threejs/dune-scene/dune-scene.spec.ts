@@ -2,21 +2,21 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { vi } from 'vitest';
 import { BaseScene } from '../base-scene/base-scene';
-import { MainScene } from './main-scene';
+import { DuneScene } from './dune-scene';
 
 describe('MainScene', () => {
-  let component: MainScene;
-  let fixture: ComponentFixture<MainScene>;
+  let component: DuneScene;
+  let fixture: ComponentFixture<DuneScene>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MainScene],
+      imports: [DuneScene],
     }).compileComponents();
 
     vi.spyOn(BaseScene.prototype, 'initThree').mockImplementation(() => {
       throw new Error('WebGL unavailable');
     });
-    fixture = TestBed.createComponent(MainScene);
+    fixture = TestBed.createComponent(DuneScene);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });
