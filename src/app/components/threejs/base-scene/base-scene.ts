@@ -1,4 +1,5 @@
-import { Component, ElementRef, viewChild } from '@angular/core';
+import type { SceneLoadState } from '../../scene-status/scene-status';
+import { Component, ElementRef, output, signal, viewChild } from '@angular/core';
 import * as THREE from 'three';
 
 @Component({
@@ -8,6 +9,9 @@ import * as THREE from 'three';
   styleUrl: './base-scene.css',
 })
 export class BaseScene {
+  // The CSS backdrop stays visible until WebGL renders its first frame.
+  readonly loadStateChange = output<SceneLoadState>();
+  readonly rendered = signal(false);
   private canvasRef = viewChild<ElementRef<HTMLCanvasElement>>('rendererCanvas');
 
   scene!: THREE.Scene;
@@ -19,11 +23,11 @@ export class BaseScene {
   initThree() {
     const canvas = this.canvasRef()?.nativeElement;
 
-    if(canvas) {
+    if (canvas) {
       // 1. Create the Scene
       this.scene = new THREE.Scene();
       this.scene.background = new THREE.Color('#ff0000');
-      
+
       // 2. Setup the Camera
       this.camera = new THREE.PerspectiveCamera(
         75,

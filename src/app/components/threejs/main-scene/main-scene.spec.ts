@@ -1,5 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { vi } from 'vitest';
+import { BaseScene } from '../base-scene/base-scene';
 import { MainScene } from './main-scene';
 
 describe('MainScene', () => {
@@ -11,12 +13,19 @@ describe('MainScene', () => {
       imports: [MainScene],
     }).compileComponents();
 
+    vi.spyOn(BaseScene.prototype, 'initThree').mockImplementation(() => {
+      throw new Error('WebGL unavailable');
+    });
     fixture = TestBed.createComponent(MainScene);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });
 
-  it('should create', () => {
+  afterEach(() => vi.restoreAllMocks());
+
+  it('keeps the canvas transparent when WebGL is unavailable', () => {
     expect(component).toBeTruthy();
+    expect(component.rendered()).toBe(false);
+    expect(fixture.nativeElement.querySelector('canvas').style.opacity).toBe('0');
   });
 });

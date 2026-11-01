@@ -25,7 +25,7 @@
   overflow: hidden;
   text-align: center;
 }
-.profile app-header-scene {
+.header-backdrop {
   position: absolute;
   inset: 0;
   z-index: -1;
@@ -198,4 +198,22 @@ ul:last-child {
   color: #52616a;
   font-size: 0.8rem;
   line-height: 1.5;
+}
+
+.header-fallback,
+.header-backdrop app-header-scene {
+  position: absolute;
+  inset: 0;
+}
+.header-fallback {
+  background:
+    radial-gradient(circle at 15% 25%, #bdcbdc 0 1px, transparent 2px),
+    radial-gradient(circle at 85% 20%, #bdcbdc 0 1px, transparent 2px),
+    radial-gradient(ellipse at 0% 60%, #573015, transparent 55%), #020610;
+}
+
+@media screen {
+  .profile {
+    padding-bottom: 3.5rem;
+  }
 }

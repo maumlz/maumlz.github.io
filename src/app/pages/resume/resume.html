@@ -1,7 +1,20 @@
 <main class="resume">
   <div class="container py-4">
     <header class="profile resume-panel">
-      <app-header-scene aria-hidden="true" />
+      <div class="header-backdrop noprint">
+        <div class="header-fallback" aria-hidden="true"></div>
+        @defer (on idle) {
+          <app-header-scene aria-hidden="true" (loadStateChange)="sceneState.set($event)" />
+          <app-scene-status [state]="sceneState()" />
+        } @placeholder {
+          <app-scene-status />
+        } @loading {
+          <app-scene-status />
+        } @error {
+          <!-- The permanent backdrop remains visible on a scene import failure. -->
+          <app-scene-status state="fallback" />
+        }
+      </div>
       <div class="profile-content">
         <img src="assets/me.jpg" alt="Mauricio Meléndez" width="128" height="128" />
         <h1>Mauricio Meléndez</h1>

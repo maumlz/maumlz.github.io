@@ -1,4 +1,9 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {
+  ComponentFixture,
+  DeferBlockBehavior,
+  DeferBlockState,
+  TestBed,
+} from '@angular/core/testing';
 import en from '../../../../public/assets/i18n/en.json';
 import es from '../../../../public/assets/i18n/es.json';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
@@ -10,6 +15,7 @@ describe('Resume', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      deferBlockBehavior: DeferBlockBehavior.Manual,
       imports: [Resume, TranslateModule.forRoot()],
     }).compileComponents();
     translate = TestBed.inject(TranslateService);
@@ -57,5 +63,20 @@ describe('Resume', () => {
     download.dispatchEvent(event);
     expect(event.defaultPrevented).toBe(true);
     expect(download.getAttribute('aria-disabled')).toBe('true');
+  });
+  it('keeps content and the fallback available before the scene loads or if its import fails', async () => {
+    const page = fixture.nativeElement as HTMLElement;
+    expect(page.querySelector('app-header-scene')).toBeNull();
+    expect(page.querySelector('.header-fallback')).toBeTruthy();
+    expect(page.querySelector('h1')?.textContent).toContain('Mauricio');
+    expect(page.querySelector('a[href="mailto:mauricio_esteban@live.com"]')).toBeTruthy();
+    const status = page.querySelector('[role="status"]');
+    expect(status?.textContent).toContain('Loading 3D scene');
+    expect(status?.closest('[aria-hidden="true"]')).toBeNull();
+    const [block] = await fixture.getDeferBlocks();
+    await block.render(DeferBlockState.Error);
+    expect(page.querySelector('[role="status"]')?.textContent).toContain('simplified background');
+    expect(page.querySelector('.header-fallback')).toBeTruthy();
+    expect(page.querySelector('app-header-scene')).toBeNull();
   });
 });

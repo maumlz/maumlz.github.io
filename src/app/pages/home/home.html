@@ -1,1 +1,14 @@
-<app-main-scene aria-hidden="true" />
+<div class="home-backdrop">
+  <div class="home-fallback" aria-hidden="true"></div>
+  @defer (on idle) {
+    <app-main-scene aria-hidden="true" (loadStateChange)="sceneState.set($event)" />
+    <app-scene-status [state]="sceneState()" />
+  } @placeholder {
+    <app-scene-status />
+  } @loading {
+    <app-scene-status />
+  } @error {
+    <!-- Keep the CSS background if the scene bundle cannot load. -->
+    <app-scene-status state="fallback" />
+  }
+</div>

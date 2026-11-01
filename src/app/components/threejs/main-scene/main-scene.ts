@@ -28,9 +28,13 @@ export class MainScene extends BaseScene implements AfterViewInit, OnDestroy {
     try {
       this.initThree();
     } catch {
+      this.loadStateChange.emit('fallback');
       return;
     }
-    if (!this.renderer) return;
+    if (!this.renderer) {
+      this.loadStateChange.emit('fallback');
+      return;
+    }
     this.scene.background = new THREE.Color('#030a17');
     this.camera.position.z = 11;
     this.camera.fov = 50;
@@ -74,9 +78,12 @@ export class MainScene extends BaseScene implements AfterViewInit, OnDestroy {
       this.arrakis = model;
       this.scene.add(model);
       this.resize();
+      this.loadStateChange.emit('ready');
     } catch (error) {
-      if (!this.destroyed)
+      if (!this.destroyed) {
+        this.loadStateChange.emit('fallback');
         console.warn('Could not load Arrakis STL; retaining the desert sphere.', error);
+      }
     }
   }
 
@@ -106,6 +113,7 @@ export class MainScene extends BaseScene implements AfterViewInit, OnDestroy {
     this.moonOne?.position.set(-halfWidth * 0.57, halfHeight * 0.57, 0);
     this.moonTwo?.position.set(halfWidth * 0.6, halfHeight * 0.72, -0.5);
     this.renderer.render(this.scene, this.camera);
+    this.rendered.set(true);
   };
 
   ngOnDestroy(): void {

@@ -21,6 +21,9 @@ export class HeaderScene extends BaseScene implements AfterViewInit, OnDestroy {
   private starfield?: Starfield;
   private landscapeTexture?: THREE.Texture;
   private destroyed = false;
+  private modelReady = false;
+  private textureReady = false;
+  private loadFailed = false;
   private ring?: THREE.Mesh;
   private animationFrameId?: number;
   private previousFrameTime?: number;
@@ -35,9 +38,14 @@ export class HeaderScene extends BaseScene implements AfterViewInit, OnDestroy {
     try {
       this.initThree();
     } catch {
+      this.loadStateChange.emit('fallback');
       return;
     }
 
+    if (!this.renderer) {
+      this.loadStateChange.emit('fallback');
+      return;
+    }
     if (this.renderer) {
       this.scene.background = new THREE.Color('#020610');
       this.starfield = new Starfield();
@@ -90,8 +98,14 @@ export class HeaderScene extends BaseScene implements AfterViewInit, OnDestroy {
       this.landscapeTexture = texture;
       if (this.ring) applyRingTexture(this.ring, texture);
       this.renderer.render(this.scene, this.camera);
+      this.textureReady = true;
+      this.updateLoadState();
     } catch (error) {
-      if (!this.destroyed) console.warn('Could not load landscape texture.', error);
+      if (!this.destroyed) {
+        this.loadFailed = true;
+        this.updateLoadState();
+        console.warn('Could not load landscape texture.', error);
+      }
     }
   }
 
@@ -116,9 +130,20 @@ export class HeaderScene extends BaseScene implements AfterViewInit, OnDestroy {
       }
       // Render once even when reduced motion is enabled.
       this.renderer.render(this.scene, this.camera);
+      this.modelReady = true;
+      this.updateLoadState();
     } catch (error) {
-      if (!this.destroyed) console.warn('Could not load STL model.', error);
+      if (!this.destroyed) {
+        this.loadFailed = true;
+        this.updateLoadState();
+        console.warn('Could not load STL model.', error);
+      }
     }
+  }
+
+  private updateLoadState(): void {
+    if (this.loadFailed) this.loadStateChange.emit('fallback');
+    else if (this.modelReady && this.textureReady) this.loadStateChange.emit('ready');
   }
 
   private resize = (): void => {
@@ -131,6 +156,7 @@ export class HeaderScene extends BaseScene implements AfterViewInit, OnDestroy {
     this.camera.updateProjectionMatrix();
     this.eclipse?.resize(this.camera);
     this.renderer.render(this.scene, this.camera);
+    this.rendered.set(true);
   };
 
   private animate = (time: number): void => {

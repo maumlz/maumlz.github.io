@@ -1,10 +1,33 @@
 :host {
   display: block;
 }
-app-main-scene {
+.home-backdrop {
   position: fixed;
   inset: 0;
   z-index: 0;
   pointer-events: none;
   background: #030a17;
+  overflow: hidden;
+}
+.home-fallback,
+app-main-scene {
+  position: absolute;
+  inset: 0;
+}
+.home-fallback {
+  background:
+    radial-gradient(circle at 18% 20%, #afbbc8 0 2px, transparent 3px),
+    radial-gradient(circle at 80% 12%, #d1dce6 0 1px, transparent 2px),
+    radial-gradient(ellipse at 70% 85%, #12263d, transparent 65%), #030a17;
+}
+.home-fallback::after {
+  content: '';
+  position: absolute;
+  width: min(65vw, 65vh);
+  aspect-ratio: 1;
+  top: 42%;
+  left: 55%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 25% 25%, #d9ba83, #9a7144 45%, #30281f 75%, #0b101b);
+  box-shadow: 0 0 35px rgb(207 170 111 / 12%);
 }
