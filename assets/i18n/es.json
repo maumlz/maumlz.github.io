@@ -64,7 +64,7 @@
           "Desarrollar y mantener componentes y páginas Angular, implementando nuevas funciones y optimizando las existentes.",
           "Desarrollar regularmente pruebas unitarias con JUnit y Jest, utilizando mocks para aislar dependencias y validar el comportamiento de las aplicaciones.",
           "Utilizar GitHub Copilot como apoyo para el desarrollo de código, la generación de pruebas y los flujos de trabajo.",
-          "Investigar incidentes de producción, analizar sus causas raíz, documentar hallazgos e implementar soluciones correctivas.",
+          "Investigar incidentes de producción y reproducir problemas reportados en entornos de QA para apoyar el análisis de causas raíz y la resolución de problemas en múltiples productos y servicios bancarios.",
           "Ejecutar y monitorear despliegues con OpenShift, colaborando con equipos de desarrollo y aseguramiento de calidad.",
           "Participar en flujos de desarrollo y entrega de software con GitHub, Jira Cloud y OpenShift."
         ]
@@ -126,6 +126,25 @@
       "label": "Fuente del modelo 3D:",
       "changes": "Adaptado para la web con escala, animación, materiales y mapeo de textura del paisaje.",
       "by": "por"
+    },
+    "professional_skills": {
+      "title": "Habilidades profesionales",
+      "items": [
+        "Resolución analítica de problemas",
+        "Aprendizaje continuo y curiosidad técnica",
+        "Adaptabilidad",
+        "Colaboración entre equipos"
+      ]
+    },
+    "ai_learning": {
+      "title": "IA y aprendizaje automático — Estudio independiente y proyectos",
+      "items": [
+        "Estudio aprendizaje automático, redes neuronales, modelos de lenguaje de gran tamaño (LLM), arquitecturas Transformer, conceptos y arquitecturas de generación aumentada por recuperación (RAG), y los fundamentos matemáticos de los sistemas modernos de IA mediante cursos en línea e investigación independiente.",
+        "Implementé una arquitectura Transformer simplificada en Python para comprender su flujo interno de datos y sus componentes principales.",
+        "Actualmente desarrollo un pequeño modelo de lenguaje de estilo GPT con PyTorch para comprender los componentes principales del entrenamiento de modelos de lenguaje y la generación de texto.",
+        "Experimenté con la ejecución local del modelo preentrenado Qwen2.5 0.5B mediante Ollama para comprender la inferencia de LLM y la ejecución local de modelos.",
+        "Investigo flujos de desarrollo asistido por IA y automatización de software con GitHub Copilot y GitHub Copilot Automations."
+      ]
     }
   },
   "site": {
