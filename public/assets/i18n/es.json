@@ -57,16 +57,16 @@
         "position": "Analista Programador Senior",
         "duration": "Diciembre 2021 – Presente",
         "items": [
-          "Diseñar, desarrollar y mantener microservicios con Java y Spring Boot para procesos de contratación digital de productos bancarios, incluidas cuentas, tarjetas de crédito y seguros.",
-          "Diseñar e implementar componentes backend con Hibernate, JPA y PostgreSQL, considerando los requisitos de integración y las dependencias entre componentes.",
-          "Mantener y mejorar una aplicación de autenticación biométrica, contribuyendo al frontend y al backend e integrando nuevos flujos de autenticación con Incode.",
-          "Integrar Elastic Application Performance Monitoring (APM) en aplicaciones Angular para facilitar la observabilidad y el monitoreo en producción.",
-          "Desarrollar y mantener componentes y páginas Angular, implementando nuevas funciones y optimizando las existentes.",
-          "Desarrollar regularmente pruebas unitarias con JUnit y Jest, utilizando mocks para aislar dependencias y validar el comportamiento de las aplicaciones.",
-          "Utilizar GitHub Copilot como apoyo para el desarrollo de código, la generación de pruebas y los flujos de trabajo.",
-          "Investigar incidentes de producción y reproducir problemas reportados en entornos de QA para apoyar el análisis de causas raíz y la resolución de problemas en múltiples productos y servicios bancarios.",
-          "Ejecutar y monitorear despliegues con OpenShift, colaborando con equipos de desarrollo y aseguramiento de calidad.",
-          "Participar en flujos de desarrollo y entrega de software con GitHub, Jira Cloud y OpenShift."
+          "Desarrollé y mantuve microservicios con Java y Spring Boot para procesos de contratación digital de cuentas bancarias, tarjetas de crédito y seguros, habilitando flujos esenciales de incorporación de clientes para múltiples productos bancarios.",
+          "Diseñé e implementé componentes backend con Hibernate, JPA y PostgreSQL, facilitando la persistencia de datos y la integración entre servicios bancarios empresariales.",
+          "Mantuve y mejoré una aplicación de autenticación biométrica en sus componentes frontend y backend, integrando nuevos flujos de autenticación con Incode para apoyar la verificación segura de la identidad de los clientes.",
+          "Integré Elastic APM en aplicaciones Angular, mejorando la visibilidad del comportamiento de las aplicaciones y facilitando una investigación más ágil de problemas en producción.",
+          "Desarrollé y optimicé componentes y páginas Angular, incorporando nuevas funciones y manteniendo los flujos existentes de las aplicaciones bancarias.",
+          "Desarrollé y mantuve pruebas unitarias con JUnit y Jest, utilizando mocks para aislar dependencias y aumentar la confianza en el comportamiento de las aplicaciones durante los cambios.",
+          "Utilicé GitHub Copilot como apoyo para el desarrollo de código, la creación de pruebas y la refactorización, mejorando la eficiencia en el trabajo diario de desarrollo.",
+          "Investigué incidentes de producción y reproduje problemas reportados en entornos de QA, contribuyendo a identificar causas raíz y validar cambios correctivos en distintos productos y servicios bancarios.",
+          "Ejecuté y monitoreé despliegues de aplicaciones mediante OpenShift, apoyando liberaciones controladas y la verificación del comportamiento de las aplicaciones después del despliegue.",
+          "Trabajé con GitHub, Jira Cloud y OpenShift como parte del ciclo de entrega de software, apoyando el desarrollo, el seguimiento de incidencias, los despliegues y el seguimiento en producción."
         ]
       },
       "code_builders": {
@@ -74,9 +74,9 @@
         "position": "Programador",
         "duration": "Junio 2021 – Diciembre 2021",
         "items": [
-          "Participé en la migración de un sistema heredado de gestión de grúas y reparación de vehículos a ASP.NET MVC con C#.",
-          "Desarrollé interfaces frontend con Bootstrap y JavaScript.",
-          "Migré funciones backend e implementé mejoras solicitadas por el cliente."
+          "Contribuí a la migración de un sistema heredado de gestión de grúas y reparación de vehículos a ASP.NET MVC con C#, modernizando la arquitectura backend de la aplicación.",
+          "Desarrollé componentes de interfaz de usuario con Bootstrap y JavaScript, mejorando la usabilidad e incorporando nuevas funciones solicitadas por el cliente.",
+          "Migré funciones backend del sistema heredado e implementé las mejoras solicitadas, contribuyendo a la transición a la nueva plataforma y preservando los flujos de negocio existentes."
         ]
       },
       "polyhedron_universe": {
@@ -84,7 +84,7 @@
         "position": "Programador",
         "duration": "Agosto 2020 – Abril 2021",
         "items": [
-          "Colaboré en una plataforma multimedia web, desarrollando entornos gráficos 3D interactivos con Three.js y React.js."
+          "Desarrollé experiencias web 3D interactivas con Three.js y React.js, permitiendo a los usuarios interactuar con contenido multimedia directamente en el navegador."
         ]
       },
       "dvrv": {

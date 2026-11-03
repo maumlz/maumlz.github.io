@@ -57,16 +57,16 @@
         "position": "Senior Analyst Programmer",
         "duration": "December 2021 – Present",
         "items": [
-          "Design, develop, and maintain Java and Spring Boot microservices supporting digital onboarding processes for banking products, including accounts, credit cards, and insurance.",
-          "Design and implement backend application components using Hibernate, JPA, and PostgreSQL, considering integration requirements and dependencies across application components.",
-          "Maintain and enhance a biometric authentication application, contributing to both frontend and backend development and integrating new authentication workflows using Incode.",
-          "Integrate Elastic Application Performance Monitoring (APM) into Angular applications to support application observability and production monitoring.",
-          "Develop and maintain Angular components and pages, implementing new functionality and optimizing existing application features.",
-          "Regularly develop unit tests using JUnit and Jest, applying mocking techniques to isolate dependencies and validate application behavior.",
-          "Leverage GitHub Copilot to assist with code development, test generation, and development workflows.",
-          "Investigate production incidents and reproduce reported issues in QA environments to support root cause analysis and troubleshooting across multiple banking products and services.",
-          "Execute and monitor application deployments using OpenShift, collaborating with development and quality assurance teams.",
-          "Participate in software development and delivery workflows using GitHub, Jira Cloud, and OpenShift."
+          "Developed and maintained Java Spring Boot microservices supporting digital onboarding processes for bank accounts, credit cards, and insurance products, enabling core customer onboarding workflows across multiple banking products.",
+          "Designed and implemented backend components using Hibernate, JPA, and PostgreSQL, supporting data persistence and integration across enterprise banking services.",
+          "Maintained and enhanced a biometric authentication application across frontend and backend components, integrating new authentication flows with Incode to support secure customer identity verification.",
+          "Integrated Elastic APM into Angular applications, improving visibility into application behavior and supporting faster investigation of production issues.",
+          "Developed and optimized Angular components and pages, delivering new functionality and maintaining existing banking application workflows.",
+          "Built and maintained unit tests using JUnit and Jest, applying mocks to isolate dependencies and improve confidence in application behavior during changes.",
+          "Used GitHub Copilot to support code development, test creation, and refactoring activities, improving efficiency during day-to-day development work.",
+          "Investigated production incidents and reproduced reported issues in QA environments, helping identify root causes and validate corrective changes across different banking products and services.",
+          "Executed and monitored application deployments through OpenShift, supporting controlled releases and verification of application behavior after deployment.",
+          "Worked across GitHub, Jira Cloud, and OpenShift as part of the software delivery lifecycle, supporting development, issue tracking, deployment, and production follow-up."
         ]
       },
       "code_builders": {
@@ -74,9 +74,9 @@
         "position": "Programmer",
         "duration": "June 2021 – December 2021",
         "items": [
-          "Participated in migrating a legacy towing and vehicle repair management system to ASP.NET MVC using C#.",
-          "Developed frontend interfaces using Bootstrap and JavaScript.",
-          "Migrated backend functionality and implemented client-requested improvements."
+          "Contributed to the migration of a legacy towing and vehicle repair management system to ASP.NET MVC with C#, modernizing the application's backend architecture.",
+          "Developed user interface components using Bootstrap and JavaScript, improving usability and supporting new client-requested functionality.",
+          "Migrated backend functionality from the legacy system and implemented requested enhancements, helping transition the application to the new platform while preserving existing business workflows."
         ]
       },
       "polyhedron_universe": {
@@ -84,7 +84,7 @@
         "position": "Programmer",
         "duration": "August 2020 – April 2021",
         "items": [
-          "Collaborated on a web-based multimedia platform, developing interactive 3D graphics environments using Three.js and React.js."
+          "Developed interactive 3D web experiences using Three.js and React.js, enabling users to interact with multimedia content directly in the browser."
         ]
       },
       "dvrv": {

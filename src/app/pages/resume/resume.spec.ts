@@ -34,11 +34,22 @@ describe('Resume', () => {
       'GitHub Copilot',
     );
     expect(page.querySelector('#experience-heading')?.parentElement?.textContent).toContain(
-      'mocking',
+      'mocks',
     );
-    expect(page.querySelector('#experience-heading')?.parentElement?.textContent).not.toContain(
+    expect(page.querySelector('#experience-heading')?.parentElement?.textContent).toContain(
       'Othala',
     );
+    const roles = Array.from(page.querySelectorAll('[aria-labelledby="experience-heading"] article'));
+    expect(roles).toHaveLength(6);
+    for (const [index, key] of fixture.componentInstance.experienceKeys.entries()) {
+      const role = en.resume.experience[key as keyof typeof en.resume.experience];
+      if (typeof role === 'string') continue;
+      expect(roles[index].querySelector('h3')?.textContent).toBe(role.title);
+      expect(roles[index].querySelector('.position')?.textContent).toBe(role.position);
+      expect(roles[index].querySelector('.duration')?.textContent).toBe(role.duration);
+      expect(Array.from(roles[index].querySelectorAll('li'), (item) => item.textContent?.trim()))
+        .toEqual(role.items);
+    }
     expect(page.querySelector('#projects-heading')).toBeNull();
     expect(page.textContent).not.toMatch(/resume\.[a-z_]+/);
   });
